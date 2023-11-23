@@ -24,7 +24,7 @@ const LearnMore = () => {
                 Exchange.
               </p>
             </div>
-            <Button className="">
+            <Button className="bg-[#D39999] text-[#900000] hover:text-[#f5f5f5]">
               <span>Learn more</span>
               <span className="ml-2">
                 <HiArrowRight />

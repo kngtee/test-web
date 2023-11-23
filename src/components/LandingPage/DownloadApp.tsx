@@ -2,7 +2,7 @@ import googleAppStore from "../../assets/images/android-banner.png";
 import iosStore from "../../assets/images/ios-banner.png";
 const DownloadApp = () => {
   return (
-    <section className="pt-[150px] 2xl:h-[800px] bg-blue-950 relative">
+    <section className="pt-[150px] bg-[#061D30] relative">
       <div className="container absolute -top-[150px] -left-0 -right-0">
         <div className="bg-red-700 w-full rounded-2xl">
           <div className="container p-10">
