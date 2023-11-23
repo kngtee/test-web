@@ -1,5 +1,12 @@
+import GetStarted from "@/components/LandingPage/GetStarted";
+import LearnMore from "@/components/LandingPage/LearnMore";
 const layout = () => {
-  return <div>layout</div>;
+  return (
+    <>
+      <GetStarted />
+      <LearnMore />
+    </>
+  );
 };
 
 export default layout;

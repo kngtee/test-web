@@ -1,12 +1,11 @@
 import "./App.css";
-import { Button } from "./components/ui/button";
+import Layout from "./layout/layout";
 
 function App() {
   return (
     <>
       <main>
-        <Button>Welcome to CLA</Button>
-        <h1 className="text-3xl font-bold">Home Page</h1>
+        <Layout />
       </main>
     </>
   );
