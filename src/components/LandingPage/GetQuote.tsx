@@ -39,7 +39,7 @@ const GetQuote: React.FunctionComponent<{}> = () => {
   const nextBtn = () => {
     //give me list of get quote based on selected nav
     const getQuoteList = getQuoteData.filter(
-      (item: lifeAssuranceProps) => item.productType === toggledNav
+      (item: any) => item.productType === toggledNav
     );
     // get length of selected tabNav
     const tabDataLength = getQuoteList.map((item) => item.data.length - 1);

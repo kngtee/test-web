@@ -1,14 +1,12 @@
-import DownloadApp from "@/components/LandingPage/DownloadApp";
-import GetStarted from "@/components/LandingPage/GetStarted";
-import LearnMore from "@/components/LandingPage/LearnMore";
-import GetQuote from "@/components/LandingPage/GetQuote";
+import Footer from "@/components/Footer";
+import MenuNavigation from "@/components/MenuNavigation";
+import Home from "@/pages/Home";
 const Layout = () => {
   return (
     <>
-      <GetStarted />
-      <GetQuote />
-      <LearnMore />
-      <DownloadApp />
+      <MenuNavigation/>
+      <Home/>
+      <Footer/>
     </>
   );
 };
