@@ -1,25 +1,23 @@
-import  { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { getQuoteData } from "../../assets/data/getQuoteData";
 import HTMLReactParser from "html-react-parser";
 import { GrLinkNext } from "react-icons/gr";
 import { GrLinkPrevious } from "react-icons/gr";
 
-interface lifeAssuranceProps {
-  productType: string;
-  data: any[];
-}
-
-const GetQuote = () => {
+const GetQuote: React.FunctionComponent<{}> = () => {
   const [toggledNav, setToggledNav] = useState<string>("Saving and Investment");
-  const [toggledNavData, setToggledNavData] = useState<any | null>();
+  const [toggledNavData, setToggledNavData] = useState<any | null>(
+    getQuoteData
+  );
   const [initialIndex, setInitialIndex] = useState<any>(0);
 
-  const getTabData = () => {
+  const getTabData = (type: string, index: number) => {
     const tabData = getQuoteData.filter(
-      (item: lifeAssuranceProps) => item.productType === toggledNav
+      (item: any) => item.productType === type
     );
+
     setToggledNavData(tabData);
-    console.log(toggledNavData);
+    setToggledNav(tabData[0].productType);
     setInitialIndex(0);
   };
 
@@ -32,7 +30,7 @@ const GetQuote = () => {
     const tabDataLength = getQuoteList.map((item) => item.data.length - 1);
     //iterate the index within the selected tabNav if not the same
     if (initialIndex === Number(tabDataLength)) {
-      setInitialIndex( initialIndex - 1);
+      setInitialIndex(initialIndex - 1);
     } else {
       setInitialIndex(initialIndex - 1);
     }
@@ -47,12 +45,12 @@ const GetQuote = () => {
     const tabDataLength = getQuoteList.map((item) => item.data.length - 1);
     //iterate the index within the selected tabNav if not the same
     if (initialIndex !== Number(tabDataLength)) {
-      setInitialIndex( initialIndex + 1);
+      setInitialIndex(initialIndex + 1);
     }
   };
 
   useEffect(() => {
-    getTabData();
+    getTabData(toggledNav, 0);
   }, []);
 
   return (
@@ -65,8 +63,7 @@ const GetQuote = () => {
               <div key={index}>
                 <button
                   onClick={() => {
-                    setToggledNav(nav.productType);
-                    getTabData();
+                    getTabData(nav.productType, index);
                   }}
                   className={`font-normal text-[16px] ${
                     nav.productType === toggledNav
@@ -100,10 +97,12 @@ const GetQuote = () => {
                 >
                   {item.data && (
                     <>
-                      <img
-                        src={item.data[initialIndex].img}
-                        className="w-[80%] rounded-3xl h-[450px] brightness-50"
-                      />
+                      <div className=" rounded-3xl relative w-[80%] h-[450px] overflow-hidden">
+                        <img
+                          src={item.data[initialIndex].img}
+                          className="   brightness-50 absolute top-[-100px]"
+                        />
+                      </div>
                       <div className="absolute opacity-100 w-[70%] pl-5">
                         <p className="text-[45px] font-bold text-[#FFFFFF] text-left pb-7 mt-[30px]">
                           {item.data[initialIndex].title}
