@@ -5,17 +5,20 @@ import { GrLinkNext } from "react-icons/gr";
 import { GrLinkPrevious } from "react-icons/gr";
 
 const GetQuote: React.FunctionComponent<{}> = () => {
-  let [toggledNav, setToggledNav] = useState<string>("Saving and Investment");
-  let [toggledNavData, setToggledNavData] = useState<any | null>(null);
-  let [initialIndex, setInitialIndex] = useState<any>(0);
+  const [toggledNav, setToggledNav] = useState<string>("Saving and Investment");
+  const [toggledNavData, setToggledNavData] = useState<any | null>(
+    getQuoteData
+  );
+  const [initialIndex, setInitialIndex] = useState<any>(0);
 
-  const getTabData = () => {
+  const getTabData = (type: string, index: number) => {
     const tabData = getQuoteData.filter(
-      (item: any) => item.productType === toggledNav
+      (item: any) => item.productType === type
     );
+
     setToggledNavData(tabData);
-    console.log(toggledNavData);
-    setInitialIndex((initialIndex = 0));
+    setToggledNav(tabData[0].productType);
+    setInitialIndex(0);
   };
 
   const backBtn = () => {
@@ -27,9 +30,9 @@ const GetQuote: React.FunctionComponent<{}> = () => {
     const tabDataLength = getQuoteList.map((item) => item.data.length - 1);
     //iterate the index within the selected tabNav if not the same
     if (initialIndex === Number(tabDataLength)) {
-      setInitialIndex((initialIndex = initialIndex - 1));
+      setInitialIndex(initialIndex - 1);
     } else {
-      setInitialIndex((initialIndex = initialIndex - 1));
+      setInitialIndex(initialIndex - 1);
     }
   };
 
@@ -42,12 +45,12 @@ const GetQuote: React.FunctionComponent<{}> = () => {
     const tabDataLength = getQuoteList.map((item) => item.data.length - 1);
     //iterate the index within the selected tabNav if not the same
     if (initialIndex !== Number(tabDataLength)) {
-      setInitialIndex((initialIndex = initialIndex + 1));
+      setInitialIndex(initialIndex + 1);
     }
   };
 
   useEffect(() => {
-    getTabData();
+    getTabData(toggledNav, 0);
   }, []);
 
   return (
@@ -60,8 +63,7 @@ const GetQuote: React.FunctionComponent<{}> = () => {
               <div key={index}>
                 <button
                   onClick={() => {
-                    setToggledNav((toggledNav = nav.productType));
-                    getTabData();
+                    getTabData(nav.productType, index);
                   }}
                   className={`font-normal text-[16px] ${
                     nav.productType === toggledNav
