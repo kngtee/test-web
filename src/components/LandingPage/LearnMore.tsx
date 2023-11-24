@@ -11,13 +11,13 @@ const LearnMore = () => {
               What we do
             </h2>
             <div className="max-w-[650px] space-y-4">
-              <p className="">
+              <p className="text-[16px] leading-7">
                 Custodian Life Assurance Limited (formerly Crusader Life
                 Insurance Limited) is a specialist life insurance company
                 incorporated in Nigeria and licensed by the National Insurance
                 Commission to transact all classes of life insurance business.
               </p>
-              <p className="">
+              <p className="text-[16px] leading-7">
                 Custodian Life Assurance Limited (CLA) is the subsidiary of
                 Custodian Investment Plc, the holding company which is wholly
                 owned by Nigerians. The Company is quoted on the Nigerian Stock
