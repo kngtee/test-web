@@ -1,21 +1,26 @@
-import React, { useEffect, useState } from "react";
-import { getQuoteData } from "./getQuoteData";
+import  { useEffect, useState } from "react";
+import { getQuoteData } from "../../assets/data/getQuoteData";
 import HTMLReactParser from "html-react-parser";
 import { GrLinkNext } from "react-icons/gr";
 import { GrLinkPrevious } from "react-icons/gr";
 
-const GetQuote: React.FunctionComponent<{}> = () => {
-  let [toggledNav, setToggledNav] = useState<string>("Saving and Investment");
-  let [toggledNavData, setToggledNavData] = useState<any | null>(null);
-  let [initialIndex, setInitialIndex] = useState<any>(0);
+interface lifeAssuranceProps {
+  productType: string;
+  data: any[];
+}
+
+const GetQuote = () => {
+  const [toggledNav, setToggledNav] = useState<string>("Saving and Investment");
+  const [toggledNavData, setToggledNavData] = useState<any | null>();
+  const [initialIndex, setInitialIndex] = useState<any>(0);
 
   const getTabData = () => {
     const tabData = getQuoteData.filter(
-      (item: any) => item.productType === toggledNav
+      (item: lifeAssuranceProps) => item.productType === toggledNav
     );
     setToggledNavData(tabData);
     console.log(toggledNavData);
-    setInitialIndex((initialIndex = 0));
+    setInitialIndex(0);
   };
 
   const backBtn = () => {
@@ -27,22 +32,22 @@ const GetQuote: React.FunctionComponent<{}> = () => {
     const tabDataLength = getQuoteList.map((item) => item.data.length - 1);
     //iterate the index within the selected tabNav if not the same
     if (initialIndex === Number(tabDataLength)) {
-      setInitialIndex((initialIndex = initialIndex - 1));
+      setInitialIndex( initialIndex - 1);
     } else {
-      setInitialIndex((initialIndex = initialIndex - 1));
+      setInitialIndex(initialIndex - 1);
     }
   };
 
   const nextBtn = () => {
     //give me list of get quote based on selected nav
     const getQuoteList = getQuoteData.filter(
-      (item: any) => item.productType === toggledNav
+      (item: lifeAssuranceProps) => item.productType === toggledNav
     );
     // get length of selected tabNav
     const tabDataLength = getQuoteList.map((item) => item.data.length - 1);
     //iterate the index within the selected tabNav if not the same
     if (initialIndex !== Number(tabDataLength)) {
-      setInitialIndex((initialIndex = initialIndex + 1));
+      setInitialIndex( initialIndex + 1);
     }
   };
 
@@ -52,15 +57,15 @@ const GetQuote: React.FunctionComponent<{}> = () => {
 
   return (
     <section>
-      <div className='flex flex-col items-center'>
+      <div className="flex flex-col items-center">
         {/* tab bar */}
-        <div className='flex flex-row justify-center gap-5 bg-[#F4E6E6] rounded-[56px] py-2 w-[57%]'>
+        <div className="flex flex-row justify-center gap-5 bg-[#F4E6E6] rounded-[56px] py-2">
           {getQuoteData.map((nav: any, index: number) => {
             return (
               <div key={index}>
                 <button
                   onClick={() => {
-                    setToggledNav((toggledNav = nav.productType));
+                    setToggledNav(nav.productType);
                     getTabData();
                   }}
                   className={`font-normal text-[16px] ${
@@ -75,7 +80,8 @@ const GetQuote: React.FunctionComponent<{}> = () => {
                     nav.productType === toggledNav
                       ? "to-[#D25050]"
                       : "to-transparent"
-                  } rounded-[24px]`}>
+                  } rounded-[24px]`}
+                >
                   {nav.productType}
                 </button>
               </div>
@@ -83,30 +89,31 @@ const GetQuote: React.FunctionComponent<{}> = () => {
           })}
         </div>
         {/* image display */}
-        <div className='w-[100%] h-[460px] mt-10'>
+        <div className="w-[100%] h-[460px] mt-10">
           {toggledNavData &&
             toggledNavData.map((item: any, index: number) => {
               // return selected tabData product type
               return (
                 <div
                   key={index}
-                  className='w-[100%] justify-center flex flex-row'>
+                  className="w-[100%] justify-center flex flex-row"
+                >
                   {item.data && (
                     <>
                       <img
                         src={item.data[initialIndex].img}
-                        className='w-[80%] rounded-3xl h-[450px] brightness-50'
+                        className="w-[80%] rounded-3xl h-[450px] brightness-50"
                       />
-                      <div className='absolute opacity-100 w-[70%] pl-5'>
-                        <p className='text-[45px] font-bold text-[#FFFFFF] text-left pb-7 mt-[30px]'>
+                      <div className="absolute opacity-100 w-[70%] pl-5">
+                        <p className="text-[45px] font-bold text-[#FFFFFF] text-left pb-7 mt-[30px]">
                           {item.data[initialIndex].title}
                         </p>
                         {HTMLReactParser(item.data[initialIndex].desc)}
-                        <div className='flex flex-row justify-start pt-5'>
-                          <button className='bg-[#FFFFFF] text-[white] w-[120px] h-[30px] rounded-3xl'>
-                            <span className='flex flex-row justify-around text-[#900000]'>
+                        <div className="flex flex-row justify-start pt-5">
+                          <button className="bg-[#FFFFFF] text-[white] w-[120px] h-[30px] rounded-3xl">
+                            <span className="flex flex-row justify-around text-[#900000]">
                               Get Quote{" "}
-                              <i className='pt-1'>
+                              <i className="pt-1">
                                 <GrLinkNext color={"#900000"} />
                               </i>
                             </span>
@@ -120,14 +127,14 @@ const GetQuote: React.FunctionComponent<{}> = () => {
             })}
         </div>
         {/* dots and button */}
-        <div className='w-[78%] flex flex-row justify-between mt-4'>
+        <div className="w-[78%] flex flex-row justify-between mt-4">
           <div>
             {toggledNavData &&
               toggledNavData.map((item: any, index: number) => {
                 return (
                   <div key={index}>
                     <div></div>
-                    <div className='flex flex-row gap-3'>
+                    <div className="flex flex-row gap-3">
                       {item.data &&
                         item.data.map((item: any, index: number) => {
                           return (
@@ -137,7 +144,8 @@ const GetQuote: React.FunctionComponent<{}> = () => {
                                   ? "bg-[#900000]"
                                   : "bg-[#ccc6c6]"
                               }`}
-                              key={index}></div>
+                              key={index}
+                            ></div>
                           );
                         })}
                     </div>
@@ -146,13 +154,14 @@ const GetQuote: React.FunctionComponent<{}> = () => {
               })}
           </div>
           <div>
-            <div className='flex flex-row gap-5'>
+            <div className="flex flex-row gap-5">
               {initialIndex > 0 ? (
                 <button
                   onClick={backBtn}
-                  className='bg-[white] text-[white] w-[100px] h-[30px] rounded-3xl'>
-                  <span className='flex flex-row justify-around text-[#900000]'>
-                    <i className='pt-1'>
+                  className="bg-[white] text-[white] w-[100px] h-[30px] rounded-3xl"
+                >
+                  <span className="flex flex-row justify-around text-[#900000]">
+                    <i className="pt-1">
                       <GrLinkPrevious />
                     </i>
                     Back
@@ -161,10 +170,11 @@ const GetQuote: React.FunctionComponent<{}> = () => {
               ) : null}
               <button
                 onClick={nextBtn}
-                className='bg-[#900000] text-[white] w-[100px] h-[30px] rounded-3xl'>
-                <span className='flex flex-row justify-around'>
+                className="bg-[#900000] text-[white] w-[100px] h-[30px] rounded-3xl"
+              >
+                <span className="flex flex-row justify-around">
                   Next{" "}
-                  <i className='pt-1'>
+                  <i className="pt-1">
                     <GrLinkNext />
                   </i>
                 </span>

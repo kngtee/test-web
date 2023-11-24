@@ -1,17 +1,17 @@
-import savingsAndInvest1 from '../../assets/images/savingsandInvest1.jpeg';
-import savingsAndInvest2 from '../../assets/images/savingsandInvest2.jpeg';
-import savingsAndInvest3 from '../../assets/images/savingsandInvest3.jpeg';
-import savingsAndInvest4 from '../../assets/images/savingsandInvest4.jpeg';
-import endowment1 from '../../assets/images/endownment1.jpeg';
-import endowment2 from '../../assets/images/endownment2.jpeg';
-import endowment3 from '../../assets/images/endownment3.jpeg';
-import protection1 from '../../assets/images/protection1.jpeg';
-import protection2 from '../../assets/images/protection2.jpeg';
-import protection3 from '../../assets/images/protection3.jpeg';
-import protection4 from '../../assets/images/protection4.jpeg';
-import annuities1 from '../../assets/images/annuities1.jpeg';
-import annuities2 from '../../assets/images/annuities2.jpeg';
-import annuities3 from '../../assets/images/annuities3.jpeg';
+import savingsAndInvest1 from '@/assets/images/savingsandInvest1.jpeg';
+import savingsAndInvest2 from '@/assets/images/savingsandInvest2.jpeg';
+import savingsAndInvest3 from '@/assets/images/savingsandInvest3.jpeg';
+import savingsAndInvest4 from '@/assets/images/savingsandInvest4.jpeg';
+import endowment1 from '@/assets/images/endownment1.jpeg';
+import endowment2 from '@/assets/images/endownment2.jpeg';
+import endowment3 from '@/assets/images/endownment3.jpeg';
+import protection1 from '@/assets/images/protection1.jpeg';
+import protection2 from '@/assets/images/protection2.jpeg';
+import protection3 from '@/assets/images/protection3.jpeg';
+import protection4 from '@/assets/images/protection4.jpeg';
+import annuities1 from '@/assets/images/annuities1.jpeg';
+import annuities2 from '@/assets/images/annuities2.jpeg';
+import annuities3 from '@/assets/images/annuities3.jpeg';
 export const getQuoteData = [
     //product 1
     {
