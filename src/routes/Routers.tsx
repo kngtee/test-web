@@ -1,3 +1,4 @@
+import Contact from "@/components/Contact";
 import About from "@/pages/About";
 import Home from "@/pages/Home";
 import { Route, Routes } from "react-router-dom";
@@ -7,6 +8,8 @@ const Routers = () => {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/about-us" element={<About />} />
+      <Route path="/contact" element={<Contact/>} />
+      
     </Routes>
   );
 };
