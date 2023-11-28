@@ -1,33 +1,36 @@
 import React, { useState, useEffect } from "react";
 import { productsData } from "@/assets/data/productsData";
+import Hero from "@/components/Hero";
+import ProductCard from "@/components/products/ProductCard";
+import { useParams } from "react-router-dom";
 
 const Products: React.FunctionComponent<{}> = () => {
-  const [initialProductsType, setInitialProductsType] = useState<any>(
-    "Saving And Investment"
-  );
+  const { id }: any = useParams();
   const [initialProductsData, setInitialProductsData] = useState<any>();
 
-  const getProductsData = (type: any) => {
+  const getProductsData = () => {
     const productData: any = productsData.filter(
-      (item: any, index: number) => item.productType === type
+      (item: any) => item.productType === id
     );
     setInitialProductsData(productData);
   };
 
   useEffect(() => {
-    getProductsData(initialProductsType);
-  }, []);
+    getProductsData();
+  }, [id]);
 
   return (
     <>
-      {initialProductsData &&
-        initialProductsData.map((item: any, index: number) => {
-          return (
-            <div key={index}>
-              <p>{item.heroDesc}</p>
-            </div>
-          );
-        })}
+      <Hero
+        title={initialProductsData && initialProductsData[0].title}
+        subtitle={initialProductsData && initialProductsData[0].subTitle}
+        description={initialProductsData && initialProductsData[0].desc}
+      />
+      <div className='bg-[#F4E6E6]'>
+        <ProductCard
+          data={initialProductsData && initialProductsData[0].data}
+        />
+      </div>
     </>
   );
 };
