@@ -4,9 +4,9 @@ import Home from "@/pages/Home";
 const Layout = () => {
   return (
     <>
-      <MenuNavigation/>
-      <Home/>
-      <Footer/>
+      <MenuNavigation />
+      <Home />
+      <Footer />
     </>
   );
 };
