@@ -9,7 +9,7 @@ const getStarted = () => {
           {/* Hero Content Left */}
           <div className="lg:w-[890px] space-y-5">
             <h1 className="text-[36px] leading-[46px] text-black font-[700] md:text-[60px] md:leading-[70px]">
-              <span className="text-[#900000]">Protecting</span> you and
+              <span className="text-primaryColor">Protecting</span> you and
               everyone you love
             </h1>
             <p className="max-w-[450px] text-[18px]">

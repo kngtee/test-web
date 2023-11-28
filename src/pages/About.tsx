@@ -45,11 +45,46 @@ const About = () => {
       {/* Vision, Mission & Goals */}
       <section>
         <div className="conatiner">
-            <div>
-                <div className="vision"></div>
-                <div className="mission"></div>
+          <div>
+            <div className="vision">
+              <span>Our Vision</span>
+              <h1>To be African's Insurer of Choice.</h1>
             </div>
-            <div className="goals"></div>
+            <div className="mission">
+              <span>Our Mission</span>
+              <p>
+                CLA’s mission is to develop and deliver innovative insurance
+                products that best satisfy customer needs, whilst operating a
+                highly profitable, efficient, resourceful and ethical
+                organisation.
+              </p>
+            </div>
+          </div>
+          <div className="goals">
+            <span>Our Goals</span>
+            <ol>
+              <li>
+                To position ourselves strategically in the market and be
+                perceived as a modern, dynamic and resourceful insurance
+                company.
+              </li>
+              <li>
+                To strike a fine balance between the businesses of sound
+                underwriting, cost control and service on one hand and
+                investment on the other.
+              </li>
+              <li>
+                To assemble a seasoned team of professionals who would, with the
+                aid of modern information processing techniques, deliver
+                qualitative, fast and efficient services to our select
+                clientele.
+              </li>
+              <li>
+                To provide services that extend beyond national frontiers and
+                ultimately establish and operate in the ECOWAS sub-region.
+              </li>
+            </ol>
+          </div>
         </div>
       </section>
     </>
