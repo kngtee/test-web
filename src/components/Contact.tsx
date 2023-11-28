@@ -1,11 +1,12 @@
-import ContactOffices from "./ContactOffices"
+
+import ContactOffices from './ContactOffices'
+
 
 
 const Contact = () => {
   return (
     <div>
-
-        <ContactOffices />
+        <ContactOffices/>
       
     </div>
   )

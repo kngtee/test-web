@@ -3,11 +3,15 @@ import claLogo from "../assets/images/cla-logo.png";
 import { Button } from "../components/ui/button";
 import { FaChevronDown } from "react-icons/fa6"
 import { RiMenuLine } from "react-icons/ri";
+import { useNavigate } from "react-router-dom";
+
 
 const MenuNavigation = () => {
+
+  const navigate = useNavigate();
   const [submenu, setSubmenu] = useState(false);
   const [submenu2, setSubmenu2] = useState(false);
-  const menuRef = useRef(null);
+  const menuRef = useRef<any>(null);
 
   const toggleMenu = () => {
     setSubmenu(!submenu);
@@ -81,7 +85,7 @@ const MenuNavigation = () => {
                 </ul>
               )}
             </li>
-            <li className="p-4 w-[full] cursor-pointer flex align-middle hover:font-bold hover:text-[#900000]">
+            <li onClick={() => navigate("/contact")}  className="p-4 w-[full] cursor-pointer flex align-middle hover:font-bold hover:text-[#900000]">
               Contact Us
             </li>
           </ul>

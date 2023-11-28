@@ -17,7 +17,8 @@ const OfficeCard = ({title, address, city, state, phone}: IContact) => {
 
 export default OfficeCard
 
+
 const styles = {
-    container: 'flex flex-col w-full  gap-2 bg-[#F5F5F5] px-5 py-5 m-5 rounded-2xl',
-    title: 'text-[#900000] font-bold text-2xl',
-  }
+  container: 'flex flex-col w-full  gap-2 bg-[#F5F5F5] px-5 py-5 m-5 rounded-2xl',
+  title: 'text-[#900000] font-bold text-2xl',
+}
