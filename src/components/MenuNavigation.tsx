@@ -44,7 +44,7 @@ const MenuNavigation = () => {
         </div>
         <div className=" md:flex hidden rounded-3xl  bg-[white] drop-shadow-xl " ref={menuRef}>
           <ul className="flex flex-row mt-2 ">
-            <li className="p-4 w-[full] cursor-pointer hover:font-bold hover:text-[#900000] flex align-middle">
+            <li onClick={() => navigate("/")} className="p-4 w-[full] cursor-pointer hover:font-bold hover:text-[#900000] flex align-middle">
               Home
             </li>
             <li className="p-4 w-[full] cursor-pointer flex align-middle hover:font-bold hover:text-[#900000]">
