@@ -1,11 +1,13 @@
 import Footer from "@/components/Footer";
 import MenuNavigation from "@/components/MenuNavigation";
-import Home from "@/pages/Home";
+import Routers from "@/routes/Routers";
 const Layout = () => {
   return (
     <>
       <MenuNavigation />
-      <Home />
+      <main>
+        <Routers />
+      </main>
       <Footer />
     </>
   );
