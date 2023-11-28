@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import { getQuoteData } from "../../assets/data/getQuoteData";
-import HTMLReactParser from "html-react-parser";
 import { GrLinkNext } from "react-icons/gr";
 import { GrLinkPrevious } from "react-icons/gr";
+import GetQuoteImage from "./GetQuoteImage";
+import GetQuoteTabBar from "./GetQuoteTabBar";
+import GetQuoteDots from "./GetQuoteDots";
 
 const GetQuote: React.FunctionComponent<{}> = () => {
   const [toggledNav, setToggledNav] = useState<string>("Saving and Investment");
@@ -55,112 +57,32 @@ const GetQuote: React.FunctionComponent<{}> = () => {
 
   return (
     <section>
-      <div className="flex flex-col items-center">
+      <div className='flex flex-col items-center'>
         {/* tab bar */}
-        <div className="flex flex-row justify-center gap-5 bg-[#F4E6E6] rounded-[56px] py-2">
-          {getQuoteData.map((nav: any, index: number) => {
-            return (
-              <div key={index}>
-                <button
-                  onClick={() => {
-                    getTabData(nav.productType, index);
-                  }}
-                  className={`font-normal text-[16px] ${
-                    nav.productType === toggledNav
-                      ? "text-[#FFFFFF]"
-                      : "text-[#3F3F3F]"
-                  } not-italic px-[15px] py-[12px] bg-gradient-to-r ${
-                    nav.productType === toggledNav
-                      ? "from-[#900000]"
-                      : "from-transparent"
-                  } ${
-                    nav.productType === toggledNav
-                      ? "to-[#D25050]"
-                      : "to-transparent"
-                  } rounded-[24px]`}
-                >
-                  {nav.productType}
-                </button>
-              </div>
-            );
-          })}
+        <div className='flex flex-row justify-center gap-5 bg-[#F4E6E6] rounded-[56px] py-[0.7rem] md:py-2 lg:py-2 px-2'>
+          <GetQuoteTabBar
+            data={getQuoteData}
+            nav={toggledNav}
+            getTabData={getTabData}
+          />
         </div>
         {/* image display */}
-        <div className="w-[100%] h-[460px] mt-10">
-          {toggledNavData &&
-            toggledNavData.map((item: any, index: number) => {
-              // return selected tabData product type
-              return (
-                <div
-                  key={index}
-                  className="w-[100%] justify-center flex flex-row"
-                >
-                  {item.data && (
-                    <>
-                      <div className=" rounded-3xl relative w-[80%] h-[450px] overflow-hidden">
-                        <img
-                          src={item.data[initialIndex].img}
-                          className="   brightness-50 absolute top-[-100px]"
-                        />
-                      </div>
-                      <div className="absolute opacity-100 w-[70%] pl-5">
-                        <p className="text-[45px] font-bold text-[#FFFFFF] text-left pb-7 mt-[30px]">
-                          {item.data[initialIndex].title}
-                        </p>
-                        {HTMLReactParser(item.data[initialIndex].desc)}
-                        <div className="flex flex-row justify-start pt-5">
-                          <button className="bg-[#FFFFFF] text-[white] w-[120px] h-[30px] rounded-3xl">
-                            <span className="flex flex-row justify-around text-[#900000]">
-                              Get Quote{" "}
-                              <i className="pt-1">
-                                <GrLinkNext color={"#900000"} />
-                              </i>
-                            </span>
-                          </button>
-                        </div>
-                      </div>
-                    </>
-                  )}
-                </div>
-              );
-            })}
+        <div className='w-[100%] h-[460px] mt-10'>
+          <GetQuoteImage data={toggledNavData} index={initialIndex} />
         </div>
-        {/* dots and button */}
-        <div className="w-[78%] flex flex-row justify-between mt-4">
+        {/* dots, next and prev button */}
+        <div className='w-[78%] flex flex-row justify-between mt-4'>
           <div>
-            {toggledNavData &&
-              toggledNavData.map((item: any, index: number) => {
-                return (
-                  <div key={index}>
-                    <div></div>
-                    <div className="flex flex-row gap-3">
-                      {item.data &&
-                        item.data.map((item: any, index: number) => {
-                          return (
-                            <div
-                              className={`w-4 h-4 rounded-full ${
-                                initialIndex === index
-                                  ? "bg-[#900000]"
-                                  : "bg-[#ccc6c6]"
-                              }`}
-                              key={index}
-                            ></div>
-                          );
-                        })}
-                    </div>
-                  </div>
-                );
-              })}
+            <GetQuoteDots data={toggledNavData} index={initialIndex} />
           </div>
           <div>
-            <div className="flex flex-row gap-5">
+            <div className='flex flex-row gap-5'>
               {initialIndex > 0 ? (
                 <button
                   onClick={backBtn}
-                  className="bg-[white] text-[white] w-[100px] h-[30px] rounded-3xl"
-                >
-                  <span className="flex flex-row justify-around text-[#900000]">
-                    <i className="pt-1">
+                  className='bg-[white] text-[white] w-[100px] h-[30px] rounded-3xl'>
+                  <span className='flex flex-row justify-around text-[#900000]'>
+                    <i className='pt-1'>
                       <GrLinkPrevious />
                     </i>
                     Back
@@ -169,11 +91,10 @@ const GetQuote: React.FunctionComponent<{}> = () => {
               ) : null}
               <button
                 onClick={nextBtn}
-                className="bg-[#900000] text-[white] w-[100px] h-[30px] rounded-3xl"
-              >
-                <span className="flex flex-row justify-around">
+                className='bg-[#900000] text-[white] w-[100px] h-[30px] rounded-3xl'>
+                <span className='flex flex-row justify-around'>
                   Next{" "}
-                  <i className="pt-1">
+                  <i className='pt-1'>
                     <GrLinkNext />
                   </i>
                 </span>
