@@ -59,24 +59,43 @@ const MenuNavigation = () => {
           </li>
           <li
             onClick={toggleMenu}
-            className="p-4 relative cursor-pointer   w-[full] flex hover:font-bold hover:text-[#900000]"
-          >
-            Products <FaChevronDown className=" w-[10px] h-[10px] ml-1 mt-2" />
+            className='p-4 relative cursor-pointer   w-[full] flex hover:font-bold hover:text-[#900000]'>
+            Products <FaChevronDown className=' w-[10px] h-[10px] ml-1 mt-2' />
             {submenu && (
-              <ul className="absolute left-0 mt-10 hover:font-normal bg-white border rounded   text-gray-700 shadow-md w-[200px]">
-                <li className=" py-2 pl-2 hover:font-semibold text-sm">
+              <ul className='absolute left-0 mt-10 hover:font-normal bg-white border rounded   text-gray-700 shadow-md w-[200px]'>
+                <li
+                  className=' py-2 pl-2 hover:font-semibold text-sm'
+                  onClick={() => {
+                    navigate("/products/Saving And Investment");
+                  }}>
                   Savings and Investment
                 </li>
-                <li className=" py-2 pl-2 hover:font-semibold text-sm">
+                <li
+                  className=' py-2 pl-2 hover:font-semibold text-sm'
+                  onClick={() => {
+                    navigate("/products/Protection Policies");
+                  }}>
                   Protection Policies
                 </li>
-                <li className=" py-2 pl-2 hover:font-semibold text-sm">
+                <li
+                  className=' py-2 pl-2 hover:font-semibold text-sm'
+                  onClick={() => {
+                    navigate("/products/Endowment Policies");
+                  }}>
                   Endowment Policies
                 </li>
-                <li className=" py-2 pl-2 hover:font-semibold text-sm">
+                <li
+                  className=' py-2 pl-2 hover:font-semibold text-sm'
+                  onClick={() => {
+                    navigate("/products/Annuity");
+                  }}>
                   Annuities
                 </li>
-                <li className=" py-2 pl-2 hover:font-semibold text-sm">
+                <li
+                  className=' py-2 pl-2 hover:font-semibold text-sm'
+                  onClick={() => {
+                    navigate("/products/Corporate");
+                  }}>
                   Corporate{" "}
                 </li>
               </ul>
