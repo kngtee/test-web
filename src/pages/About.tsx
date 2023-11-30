@@ -1,3 +1,4 @@
+import OurExecutives from "@/components/AboutUs/Tab";
 import Hero from "@/components/Hero";
 
 const About = () => {
@@ -10,7 +11,7 @@ const About = () => {
       />
       {/* About Us Write up */}
       <section className="bg-[#F5EFEF]">
-        <div className="container">
+        <div className="container px-[50px]">
           <h1 className="heading text-primaryColor">About Us</h1>
           <div className="flex flex-col gap-2 max-w-[850px] mt-4">
             <p className="text__para">
@@ -101,6 +102,16 @@ const About = () => {
                 </ul>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Executives */}
+      <section className="bg-[#FBF9F9]">
+        <div className="container">
+          <div className="flex flex-col items-center justify-center">
+            <h1 className="heading text-primaryColor">Our Executives</h1>
+            <OurExecutives />
           </div>
         </div>
       </section>
