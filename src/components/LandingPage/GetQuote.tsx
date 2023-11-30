@@ -13,7 +13,7 @@ const GetQuote: React.FunctionComponent<{}> = () => {
   );
   const [initialIndex, setInitialIndex] = useState<any>(0);
 
-  const getTabData = (type: string, index: number) => {
+  const getTabData = (type: string) => {
     const tabData = getQuoteData.filter(
       (item: any) => item.productType === type
     );
@@ -52,7 +52,7 @@ const GetQuote: React.FunctionComponent<{}> = () => {
   };
 
   useEffect(() => {
-    getTabData(toggledNav, 0);
+    getTabData(toggledNav);
   }, []);
 
   return (
