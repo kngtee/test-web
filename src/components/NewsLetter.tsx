@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Button } from "../components/ui/button";
 
 const NewsLetter = () => {
@@ -33,5 +33,3 @@ const NewsLetter = () => {
 };
 
 export default NewsLetter;
-
-
