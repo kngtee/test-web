@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useState, useEffect } from "react";
 import { productsData } from "@/assets/data/productsData";
 import Hero from "@/components/Hero";
