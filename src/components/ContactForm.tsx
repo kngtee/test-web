@@ -13,7 +13,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="grid grid-cols-3 gap-10 py-4 mx-10 mt-5">
+    <div className="md:grid md:grid-cols-3 flex-col md:flex-row lg:flex-row gap-10 py-4 mx-10 mt-5">
       <div className="col-span-2 flex flex-col">
         <h1 className="text-[#900000] font-semibold text-2xl">
           Share your ideas, inquiries and provide feedback

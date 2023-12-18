@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { executives} from "@/assets/data/executives";
+import { executives } from "@/assets/data/executives";
 import { useState } from "react";
 import { FaCircle } from "react-icons/fa6";
 
@@ -13,7 +13,11 @@ const ExecList = () => {
         <div className="mt-[38px]">
           {executives.map((item: any, index: number) => (
             <div
-              className="p-3 lg:p-5 rounded-[12px] border border-solid bg-[#F4E6E6] mb-5 cursor-pointer flex items-center justify-start gap-10 h-[80px] w-[500px] "
+              className={`p-3 lg:p-5 rounded-[12px] border border-solid ${
+                active === index ? "bg-[#F4E6E6]" : "bg-[#FAF5F5]"
+              } mb-5 cursor-pointer flex items-center ${
+                active === index ? "justify-between" : "justify-start"
+              } gap-10 h-[80px] w-[500px] `}
               onClick={() => {
                 setDesc(item.desc);
                 setActive(index);
@@ -39,5 +43,3 @@ const ExecList = () => {
 };
 
 export default ExecList;
-
-

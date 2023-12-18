@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React from "react";
 
 interface getQuoteDots {
@@ -28,7 +29,9 @@ const GetQuoteDots: React.FunctionComponent<getQuoteDots> = ({
                             ? "bg-[#900000]"
                             : "bg-[#ccc6c6]"
                         }`}
-                        key={index}></div>
+                        key={index}>
+                        <p className='hidden'>{item.title}</p>
+                      </div>
                     );
                   })}
               </div>
