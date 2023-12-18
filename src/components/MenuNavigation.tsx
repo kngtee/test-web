@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState, useRef, useEffect } from "react";
 import claLogo from "../assets/images/cla-logo.png";
 import { Button } from "../components/ui/button";

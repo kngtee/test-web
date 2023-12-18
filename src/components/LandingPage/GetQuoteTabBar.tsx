@@ -3,7 +3,7 @@ import React from "react";
 interface getQuoteTabBar {
   data: any;
   nav: string;
-  getTabData: (type: string, index: number) => void;
+  getTabData: (type: string) => void;
 }
 
 const GetQuoteTabBar: React.FunctionComponent<getQuoteTabBar> = ({
@@ -21,7 +21,7 @@ const GetQuoteTabBar: React.FunctionComponent<getQuoteTabBar> = ({
             <div key={index}>
               <button
                 onClick={() => {
-                  getTabData(nav.productType, index);
+                  getTabData(nav.productType);
                 }}
                 className={`font-normal text-[12px] md:text-[14px] lg:text-[16px] ${
                   nav.productType === toggledNav

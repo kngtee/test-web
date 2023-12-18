@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useEffect, useState } from "react";
 import { getQuoteData } from "../../assets/data/getQuoteData";
 import { GrLinkNext } from "react-icons/gr";
@@ -5,6 +6,7 @@ import { GrLinkPrevious } from "react-icons/gr";
 import GetQuoteImage from "./GetQuoteImage";
 import GetQuoteTabBar from "./GetQuoteTabBar";
 import GetQuoteDots from "./GetQuoteDots";
+import { Button } from "../ui/button";
 
 const GetQuote: React.FunctionComponent<{}> = () => {
   const [toggledNav, setToggledNav] = useState<string>("Saving and Investment");
@@ -13,7 +15,7 @@ const GetQuote: React.FunctionComponent<{}> = () => {
   );
   const [initialIndex, setInitialIndex] = useState<any>(0);
 
-  const getTabData = (type: string, index: number) => {
+  const getTabData = (type: string) => {
     const tabData = getQuoteData.filter(
       (item: any) => item.productType === type
     );
@@ -52,7 +54,7 @@ const GetQuote: React.FunctionComponent<{}> = () => {
   };
 
   useEffect(() => {
-    getTabData(toggledNav, 0);
+    getTabData(toggledNav);
   }, []);
 
   return (
@@ -78,18 +80,18 @@ const GetQuote: React.FunctionComponent<{}> = () => {
           <div>
             <div className='flex flex-row gap-5'>
               {initialIndex > 0 ? (
-                <button
+                <Button
                   onClick={backBtn}
-                  className='bg-[white] text-[white] w-[100px] h-[30px] rounded-3xl'>
-                  <span className='flex flex-row justify-around text-[#900000]'>
+                  className='bg-transparent text-[white] w-[100px] h-[30px] rounded-3xl'>
+                  <span className='flex flex-row justify-around text-[#900000] hover:text-white'>
                     <i className='pt-1'>
                       <GrLinkPrevious />
                     </i>
                     Back
                   </span>
-                </button>
+                </Button>
               ) : null}
-              <button
+              <Button
                 onClick={nextBtn}
                 className='bg-[#900000] text-[white] w-[100px] h-[30px] rounded-3xl'>
                 <span className='flex flex-row justify-around'>
@@ -98,7 +100,7 @@ const GetQuote: React.FunctionComponent<{}> = () => {
                     <GrLinkNext />
                   </i>
                 </span>
-              </button>
+              </Button>
             </div>
           </div>
         </div>

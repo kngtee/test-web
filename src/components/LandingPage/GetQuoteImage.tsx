@@ -1,6 +1,8 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React from "react";
 import HTMLReactParser from "html-react-parser";
 import { GrLinkNext } from "react-icons/gr";
+import { Button } from "../ui/button";
 
 interface getQuoteImageProps {
   data: any;
@@ -32,14 +34,14 @@ const GetQuoteImage: React.FunctionComponent<getQuoteImageProps> = ({
                     </p>
                     {HTMLReactParser(item.data[initialIndex].desc)}
                     <div className='flex flex-row justify-start pt-5'>
-                      <button className='bg-[#FFFFFF] text-[white] w-[120px] h-[30px] rounded-3xl'>
-                        <span className='flex flex-row justify-around text-[#900000]'>
+                      <Button className='bg-[#FFFFFF] text-[white] w-[120px] h-[30px] rounded-3xl '>
+                        <span className='flex flex-row justify-around text-[#900000] hover:text-white'>
                           Get Quote{" "}
-                          <i className='pt-1'>
+                          <i className='pt-1 '>
                             <GrLinkNext color={"#900000"} />
                           </i>
                         </span>
-                      </button>
+                      </Button>
                     </div>
                   </div>
                 </>
