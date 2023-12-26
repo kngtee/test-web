@@ -1,5 +1,6 @@
-import OurExecutives from "@/components/AboutUs/Tab";
-import Hero from "@/components/Hero";
+import React from "react";
+import OurExecutives from "../components/AboutUs/Tab";
+import Hero from "../components/Hero";
 
 const About = () => {
   return (

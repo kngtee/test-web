@@ -1,7 +1,8 @@
-import DownloadApp from "@/components/LandingPage/DownloadApp";
-import GetStarted from "@/components/LandingPage/GetStarted";
-import LearnMore from "@/components/LandingPage/LearnMore";
-import GetQuote from "@/components/LandingPage/GetQuote";
+import React from "react";
+import DownloadApp from "../components/LandingPage/DownloadApp";
+import GetStarted from "../components/LandingPage/GetStarted";
+import LearnMore from "../components/LandingPage/LearnMore";
+import GetQuote from "../components/LandingPage/GetQuote";
 const Home = () => {
   return (
     <>
