@@ -38,25 +38,22 @@ const MenuNavigation = () => {
   }, [menuRef]);
 
   return (
-    <div className="flex flex-row items-center justify-between py-8 bg-[#FBF9F9] px-10">
-      <div className="flex justify-center">
-        <img src={claLogo} alt="logo" className=" h-[40px] md:h-[65.5px]" />
+    <div className='flex flex-row items-center justify-between py-8 bg-[#FBF9F9] px-10'>
+      <div className='flex justify-center'>
+        <img src={claLogo} alt='logo' className=' h-[40px] md:h-[65.5px]' />
       </div>
       <div
-        className=" md:flex hidden rounded-3xl  bg-[white] drop-shadow-xl "
-        ref={menuRef}
-      >
-        <ul className="flex flex-row mt-2 ">
+        className=' md:flex hidden rounded-3xl  bg-[white] drop-shadow-xl '
+        ref={menuRef}>
+        <ul className='flex flex-row mt-2 '>
           <li
             onClick={() => navigate("/")}
-            className="p-4 w-[full] cursor-pointer hover:font-bold hover:text-[#900000] flex align-middle"
-          >
+            className='p-4 w-[full] cursor-pointer hover:font-bold hover:text-[#900000] flex align-middle'>
             Home
           </li>
           <li
             onClick={() => navigate("/about-us")}
-            className="p-4 w-[full] cursor-pointer flex align-middle hover:font-bold hover:text-[#900000]"
-          >
+            className='p-4 w-[full] cursor-pointer flex align-middle hover:font-bold hover:text-[#900000]'>
             About Us
           </li>
           <li
@@ -103,39 +100,63 @@ const MenuNavigation = () => {
               </ul>
             )}
           </li>
-          <li className="p-4 w-[full] cursor-pointer flex align-middle hover:font-bold hover:text-[#900000]">
+          <li className='p-4 w-[full] cursor-pointer flex align-middle hover:font-bold hover:text-[#900000]'>
             Media
           </li>
-          <li onClick={() => navigate("/claim")} className="p-4 w-[full] cursor-pointer flex align-middle hover:font-bold hover:text-[#900000]">
+          <li
+            onClick={() => navigate("/claim")}
+            className='p-4 w-[full] cursor-pointer flex align-middle hover:font-bold hover:text-[#900000]'>
             Make a Claim
           </li>
           <li
             onClick={toggleMenu2}
-            className="p-4 relative w-[full] cursor-pointer flex align-middle hover:font-bold hover:text-[#900000]"
-          >
-            Resources <FaChevronDown className=" w-[10px] h-[10px] ml-1 mt-2" />
+            className='p-4 relative w-[full] cursor-pointer flex align-middle hover:font-bold hover:text-[#900000]'>
+            Resources <FaChevronDown className=' w-[10px] h-[10px] ml-1 mt-2' />
             {submenu2 && (
-              <ul className="absolute left-0 mt-10 bg-white border rounded hover:font-normal text-gray-700 shadow-md">
-                <li className="p-2 hover:font-semibold text-sm">FAQs</li>
-                <li className="p-2 hover:font-semibold text-sm">Finacials</li>
-                <li className="p-2 hover:font-semibold text-sm">Downloads</li>
-                <li className="p-2 hover:font-semibold text-sm">Corporates</li>
+              <ul className='absolute left-0 mt-10 bg-white border rounded hover:font-normal text-gray-700 shadow-md'>
+                <li
+                  className='p-2 hover:font-semibold text-sm'
+                  onClick={() => {
+                    navigate("/resources/FAQs");
+                  }}>
+                  FAQs
+                </li>
+                <li
+                  className='p-2 hover:font-semibold text-sm'
+                  onClick={() => {
+                    navigate("/resources/Financials");
+                  }}>
+                  Finacials
+                </li>
+                <li
+                  className='p-2 hover:font-semibold text-sm'
+                  onClick={() => {
+                    navigate("/resources/Downloads");
+                  }}>
+                  Downloads
+                </li>
+                <li
+                  className='p-2 hover:font-semibold text-sm'
+                  onClick={() => {
+                    navigate("/resources/Corporate");
+                  }}>
+                  Corporates
+                </li>
               </ul>
             )}
           </li>
           <li
             onClick={() => navigate("/contact")}
-            className="p-4 w-[full] cursor-pointer flex align-middle hover:font-bold hover:text-[#900000]"
-          >
+            className='p-4 w-[full] cursor-pointer flex align-middle hover:font-bold hover:text-[#900000]'>
             Contact Us
           </li>
         </ul>
       </div>
 
-      <div className="hidden md:flex justify-items-center align-middle m-3">
+      <div className='hidden md:flex justify-items-center align-middle m-3'>
         <Button>Access Self-Service</Button>
       </div>
-      <RiMenuLine size={20} className="md:hidden" />
+      <RiMenuLine size={20} className='md:hidden' />
     </div>
   );
 };
