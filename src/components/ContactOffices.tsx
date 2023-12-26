@@ -1,3 +1,4 @@
+import React from "react";
 import { MockContact } from "@/assets/data/getContactData";
 import OfficeCard from "./OfficeCard";
 

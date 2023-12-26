@@ -5,6 +5,7 @@ import Home from "../pages/Home";
 import { Route, Routes } from "react-router-dom";
 import Products from "../pages/Products";
 import Media from "../pages/Media";
+import Claim from "../components/MakeClaim/Claim";
 
 const Routers = () => {
   return (
@@ -14,6 +15,7 @@ const Routers = () => {
       <Route path="/contact" element={<Contact />} />
       <Route path="/products/:id" element={<Products />} />
       <Route path="/media" element={<Media />} />
+      <Route path='/claim' element={<Claim />} />
     </Routes>
   );
 };
