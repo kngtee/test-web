@@ -138,7 +138,7 @@ const Claim = () => {
                           placeholder="Report an Incident"
                         />
                         <Button type="submit" className="bg-[#900000] ">
-                          <span className="flex justify-between gap-36 items-center ">
+                          <span className="flex justify-between gap-40 items-center ">
                             Make a Claim <IoIosArrowForward />
                           </span>
                         </Button>
