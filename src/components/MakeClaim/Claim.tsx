@@ -44,23 +44,23 @@ const Claim = () => {
           <TabList
             list-style="none"
             className={
-              "flex outline-none items-center justify-center py-[10px] gap-2 rounded-3xl mx-[500px] bg-[#F4E6E6]"
+              "flex outline-none items-center p-3 justify-center gap-2 rounded-3xl mx-[500px] bg-[#F4E6E6]"
             }
           >
-            <Tab className={" outline-none bg-[#F4E6E6]"}>
+            <Tab className={"  outline-none bg-[#F4E6E6]"}>
               <h6
-                className={` text-xs md:text-sm ${
+                className={` text-xs  font-medium md:text-sm ${
                   selectedTab === 0 ? "text-[white]" : "text-[black]"
                 } rounded-2xl ${
                   selectedTab === 0 ? "bg-[#900000]" : "bg-[#F4E6E6]"
                 } px-2 py-1 cursor-pointer `}
               >
-                Make claim
+                Make a claim
               </h6>
             </Tab>
             <Tab className={" outline-none bg-[#F4E6E6]"}>
               <h6
-                className={` ${
+                className={` text-sm rounded-2xl font-medium md:text-sm  ${
                   selectedTab === 1 ? "text-[white]" : "text-[black]"
                 } ${
                   selectedTab === 1 ? "bg-[#900000]" : "bg-[#F4E6E6]"
@@ -96,7 +96,7 @@ const Claim = () => {
                           <Field
                             type="email"
                             name="email"
-                            placeholder="Email Address"
+                            placeholder="Email"
                             onChange={handleChange}
                             className="border border-solid border-[#6C8396] p-2"
                           />
@@ -150,7 +150,33 @@ const Claim = () => {
             </div>
           </TabPanel>
           <TabPanel>
-            <h2 className="my-4 justify-center items-center">claim status</h2>
+            <div className="flex flex-col gap-2 mx-10">
+              <h1 className="text-[#900000] font-semibold text-xl">Enter claim number</h1>
+              <p>Check your claim status today by providing your claim number<br/> for faster assistance</p>
+               
+                <Formik
+                initialValues={initialValues}
+                onSubmit={(values) => console.log(values)}
+              >
+               { ({handleChange}) => (
+                  <Form className="grid grid-cols-1 gap-4 w-[50%] mt-4">
+                    <Field
+                      type="text"
+                      name="claimNumber"
+                      onChange={handleChange}
+                      className="border border-solid border-[#6C8396] p-2"
+                      placeholder="Claim Number"
+                    />
+                    <Button  type="submit" className="bg-[#900000] my-2 w-[50%] ">
+                      <div className="  flex justify-between items-center gap-28 ">
+                        Check Status <IoIosArrowForward />
+                      </div>
+                    </Button>
+                  </Form>
+                )
+               } 
+               </Formik>
+            </div>
           </TabPanel>
         </Tabs>
       </div>
