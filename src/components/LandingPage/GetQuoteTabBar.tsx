@@ -1,4 +1,5 @@
 import React from "react";
+import { GrLinkNext } from "react-icons/gr";
 
 interface getQuoteTabBar {
   data: any;
@@ -15,7 +16,7 @@ const GetQuoteTabBar: React.FunctionComponent<getQuoteTabBar> = ({
   const toggledNav: string = nav;
   return (
     <>
-      <div className='flex flex-row justify-center gap-5 bg-[#F4E6E6] rounded-[56px] py-[0.8px] md:py-[1.5px] lg:py-[2px] px-2'>
+      <div className='flex flex-row justify-center gap-5 bg-[#F4E6E6] rounded-[56px] py-[0.8px] md:py-[1.5px] lg:py-[2px] px-[4px]'>
         {getQuoteData.map((nav: any, index: number) => {
           return (
             <div key={index}>
@@ -41,6 +42,16 @@ const GetQuoteTabBar: React.FunctionComponent<getQuoteTabBar> = ({
             </div>
           );
         })}
+        <div>
+          <a href='#'>
+            <button className='font-normal text-[12px] md:text-[14px] lg:text-[16px] text-[#900000] opacity-80 flex py-3 gap-2'>
+              <i className='not-italic hidden md:hidden lg:block'>
+                Take a recommendation quiz
+              </i>{" "}
+              <GrLinkNext />
+            </button>
+          </a>
+        </div>
       </div>
     </>
   );
