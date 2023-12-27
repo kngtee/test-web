@@ -29,7 +29,11 @@ const getStarted = () => {
               We're more than a company - we're your lifelong partners in
               safeguarding the people and dreams you hold dear
             </p>
+            <div className="flex gap-4">
             <Button className="w-[200px] h-[50px] font-bold">Learn more</Button>
+            <Button className="w-[200px] h-[50px] font-bold bg-[#F4E6E6] text-primaryColor hover:bg-[#F4E6E6]">Take a survey</Button>
+
+            </div>
           </div>
           <div className="">
             <figure className="max-w-[720px]">
