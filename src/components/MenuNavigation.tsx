@@ -100,7 +100,7 @@ const MenuNavigation = () => {
               </ul>
             )}
           </li>
-          <li className='p-4 w-[full] cursor-pointer flex align-middle hover:font-bold hover:text-[#900000]'>
+          <li onClick={() => navigate("/media")} className="p-4 w-[full] cursor-pointer flex align-middle hover:font-bold hover:text-[#900000]">
             Media
           </li>
           <li

@@ -1,3 +1,4 @@
+import React from "react";
 import { Button } from "../ui/button";
 import { HiArrowRight } from "react-icons/hi2";
 
@@ -6,7 +7,7 @@ const LearnMore = () => {
     <>
       <section className="pt-[60px] pb-[220px] 2xl:h-[800px] bg-[#F5F5F5]">
         <div className="container space-y-10">
-          <div className="container space-y-6 px-10">
+          <div className="container space-y-6 px-8">
             <h2 className="text-[48px] leading-[58px] font-bold text-[#900000]">
               What we do
             </h2>
