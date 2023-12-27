@@ -9,7 +9,7 @@ const Home = () => {
     <>
       <GetStarted />
       
-      <div className="container flex bg-[#3A0000] p-4 items-center justify-start gap-4">
+      <div className="w-full flex bg-[#3A0000] p-4 items-center justify-start gap-4">
         <figure>
           <img src={notice} alt="" className="w-10 h-10" />
         </figure>
