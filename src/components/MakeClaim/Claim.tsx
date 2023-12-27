@@ -35,7 +35,7 @@ const Claim = () => {
           description=""
         />
       </div>
-      <div className="mt-6">
+      <div className="mt-4">
         <Tabs
           selectedIndex={selectedTab}
           onSelect={(index) => setSelectedTab(index)}
@@ -52,7 +52,7 @@ const Claim = () => {
                 className={` text-xs  font-medium md:text-sm ${
                   selectedTab === 0 ? "text-[white]" : "text-[black]"
                 } rounded-2xl ${
-                  selectedTab === 0 ? "bg-[#900000]" : "bg-[#F4E6E6]"
+                  selectedTab === 0 ? "bg-[#900000] h-[40px] justify-center flex items-center" : "bg-[#F4E6E6]"
                 } px-2 py-1 cursor-pointer `}
               >
                 Make a claim
@@ -63,7 +63,7 @@ const Claim = () => {
                 className={` text-sm rounded-2xl font-medium md:text-sm  ${
                   selectedTab === 1 ? "text-[white]" : "text-[black]"
                 } ${
-                  selectedTab === 1 ? "bg-[#900000]" : "bg-[#F4E6E6]"
+                  selectedTab === 1 ? "bg-[#900000] h-[40px] justify-center flex items-center" : "bg-[#F4E6E6]"
                 } text-sm rounded-2xl px-2 py-1 cursor-pointer `}
               >
                 Claim status
@@ -167,8 +167,8 @@ const Claim = () => {
                       className="border border-solid border-[#6C8396] p-2"
                       placeholder="Claim Number"
                     />
-                    <Button  type="submit" className="bg-[#900000] my-2 w-[50%] ">
-                      <div className="  flex justify-between items-center gap-28 ">
+                    <Button  type="submit" className="bg-[#900000] my-2 mb-4 w-[30%] ">
+                      <div className="  flex justify-between items-center gap-10 ">
                         Check Status <IoIosArrowForward />
                       </div>
                     </Button>
