@@ -3,6 +3,7 @@ import React from "react";
 import { Formik, Form, Field} from "formik";
 import { ContactValidation } from "./ContactValidation";
 import { Button } from "./ui/button";
+import { IoIosArrowForward } from "react-icons/io";
 
 const ContactForm = () => {
   const initialValues = {
@@ -83,6 +84,7 @@ const ContactForm = () => {
           <p className="text-sm">Saturday: Closed</p>
           <p className="text-sm">Sunday: Closed</p>
         </div>
+        <button className="bg-[#900000] font-medium  gap-24 items-center text-white rounded-lg justify-start flex px-4 py-6"><h4>Take a quick survey</h4><IoIosArrowForward/></button>
       </div>
     </div>
   );

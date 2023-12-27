@@ -159,7 +159,7 @@ const Claim = () => {
                 onSubmit={(values) => console.log(values)}
               >
                { ({handleChange}) => (
-                  <Form className="grid grid-cols-1 gap-4 w-[50%] mt-4">
+                  <Form className="grid grid-cols-1 gap-4 w-[40%] mt-4">
                     <Field
                       type="text"
                       name="claimNumber"
@@ -167,7 +167,7 @@ const Claim = () => {
                       className="border border-solid border-[#6C8396] p-2"
                       placeholder="Claim Number"
                     />
-                    <Button  type="submit" className="bg-[#900000] my-2 mb-4 w-[30%] ">
+                    <Button  type="submit" className="bg-[#900000] my-2 mb-4 w-[40%] ">
                       <div className="  flex justify-between items-center gap-10 ">
                         Check Status <IoIosArrowForward />
                       </div>
