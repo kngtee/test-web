@@ -92,7 +92,7 @@ const About = () => {
                   <li className="text__para">
                     To assemble a seasoned team of professionals who would, with
                     the aid of modern information processing techniques, deliver
-                    qualitative, fast and efficient services to our select
+                    qualitative, fast and efficient service to our select
                     clientele.
                   </li>
                   <li className="text__para">
