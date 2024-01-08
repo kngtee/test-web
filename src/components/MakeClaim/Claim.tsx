@@ -55,9 +55,9 @@ const Claim = () => {
             </TabsTrigger>
           </TabsList>
 
-          <div className="flex flex-row w-[98%]">
+          <div className="flex flex-row w-[100%]">
           <TabsContent value="makeClaim">
-            <div className=" w-screen">
+            <div className=" w-screen mb-10">
               <Formik
                 initialValues={initialValues}
                 onSubmit={(values) => console.log(values)}
@@ -134,13 +134,13 @@ const Claim = () => {
               </Formik>
             </div>
           </TabsContent></div>
-          <div className="flex flex-row w-[98%] mt-4">
+          <div className="flex flex-row w-[98%] mt-4 mb-10">
             <TabsContent className="" value="claims">
               <div className="flex flex-col w-screen mt-4 px-10">
                 <h1 className="text-[#900000] font-semibold text-xl">
                   Enter claim number
                 </h1>
-                <p className=" text-sm">
+                <p className=" text-sm mt-4">
                   Check your claim status today by providing your claim number
                   <br /> for faster assistance
                 </p>
@@ -150,12 +150,12 @@ const Claim = () => {
                   onSubmit={(values) => console.log(values)}
                 >
                   {({ handleChange }) => (
-                    <Form className="grid grid-cols-1 gap-4 w-[40%] mt-4">
+                    <Form className="grid grid-cols-1 gap-4 w-[40%] ">
                       <Field
                         type="text"
                         name="claimNumber"
                         onChange={handleChange}
-                        className="border border-solid border-[#e4e5e7] p-2"
+                        className="border border-solid border-[#e4e5e7] p-2 mt-2"
                         placeholder="Claim Number"
                       />
                       <Button type="submit" className="bg-[#900000] my-2 w-[50%] ">
