@@ -5,7 +5,7 @@ import heroImg from "../../assets/images/hero-img.png";
 
 const getStarted = () => {
   return (
-    <section className="pt-[60px] 2xl:h-[800px] bg-[#FBF9F9]">
+    <section className="pt-14 2xl:h-[800px] bg-[#FBF9F9]">
       <div className="container">
         <div className="flex flex-col lg:flex-row gap-[60px] items-center justify-between">
           {/* Hero Content Left */}
