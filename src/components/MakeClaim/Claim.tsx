@@ -2,12 +2,12 @@ import React from "react";
 import Hero from "../Hero";
 import { Formik, Form, Field } from "formik";
 import { Button } from "../ui/button";
-import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+// import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import { IoIosArrowForward } from "react-icons/io";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tabs";
 
 const Claim = () => {
-  const [selectedTab, setSelectedTab] = React.useState(0);
   const [isFocused, setIsFocused] = React.useState(false);
 
   const initialValues = {
@@ -21,11 +21,11 @@ const Claim = () => {
 
   const handleFocus = () => {
     setIsFocused(true);
-  }
+  };
 
   const handleBlur = () => {
     setIsFocused(false);
-  }
+  };
   return (
     <div>
       <div>
@@ -37,42 +37,27 @@ const Claim = () => {
       </div>
       <div className="mt-4">
         <Tabs
-          selectedIndex={selectedTab}
-          onSelect={(index) => setSelectedTab(index)}
-          className={"flex flex-col  "}
+          className="flex flex-col items-center justify-center"
+          defaultValue="makeClaim"
         >
-          <TabList
-            list-style="none"
-            className={
-              "flex outline-none items-center p-3 justify-center gap-2 rounded-3xl mx-[500px] bg-[#F4E6E6]"
-            }
-          >
-            <Tab className={"  outline-none bg-[#F4E6E6]"}>
-              <h6
-                className={` text-xs  font-medium md:text-sm ${
-                  selectedTab === 0 ? "text-[white]" : "text-[black]"
-                } rounded-2xl ${
-                  selectedTab === 0 ? "bg-[#900000] h-[40px] justify-center flex items-center" : "bg-[#F4E6E6]"
-                } px-2 py-1 cursor-pointer `}
-              >
-                Make a claim
-              </h6>
-            </Tab>
-            <Tab className={" outline-none bg-[#F4E6E6]"}>
-              <h6
-                className={` text-sm rounded-2xl font-medium md:text-sm  ${
-                  selectedTab === 1 ? "text-[white]" : "text-[black]"
-                } ${
-                  selectedTab === 1 ? "bg-[#900000] h-[40px] justify-center flex items-center" : "bg-[#F4E6E6]"
-                } text-sm rounded-2xl px-2 py-1 cursor-pointer `}
-              >
-                Claim status
-              </h6>
-            </Tab>
-          </TabList>
+          <TabsList list-style="none">
+            <TabsTrigger
+              value="makeClaim"
+              className={"  outline-none bg-[#F4E6E6]"}
+            >
+              <h6>Make a claim</h6>
+            </TabsTrigger>
+            <TabsTrigger
+              value="claims"
+              className={" outline-none bg-[#F4E6E6]"}
+            >
+              <h6>Claim status</h6>
+            </TabsTrigger>
+          </TabsList>
 
-          <TabPanel>
-            <div>
+          <div className="flex flex-row w-[100%]">
+          <TabsContent value="makeClaim">
+            <div className=" w-screen mb-10">
               <Formik
                 initialValues={initialValues}
                 onSubmit={(values) => console.log(values)}
@@ -91,14 +76,14 @@ const Claim = () => {
                             name="fullname"
                             placeholder="Full Name"
                             onChange={handleChange}
-                            className="border border-solid border-[#6C8396] p-2"
+                            className="border border-solid border-[#e4e5e7] p-2"
                           />
                           <Field
                             type="email"
                             name="email"
                             placeholder="Email"
                             onChange={handleChange}
-                            className="border border-solid border-[#6C8396] p-2"
+                            className="border border-solid border-[#e4e5e7] p-2"
                           />
                         </div>
                         <div className="grid grid-cols-2 gap-4">
@@ -107,7 +92,7 @@ const Claim = () => {
                             name="mobileNumber"
                             placeholder="Mobile Number"
                             onChange={handleChange}
-                            className="border border-solid border-[#6C8396] p-2"
+                            className="border border-solid border-[#e4e5e7] p-2"
                           />
                           <Field
                             type={isFocused ? "date" : "text"}
@@ -116,7 +101,7 @@ const Claim = () => {
                             onChange={handleChange}
                             onFocus={handleFocus}
                             onBlur={handleBlur}
-                            className="border border-solid border-[#6C8396] p-2"
+                            className="border border-solid border-[#e4e5e7] p-2"
                           />
                         </div>
                         <div className="grid grid-cols-1 gap-4">
@@ -125,7 +110,7 @@ const Claim = () => {
                             name="policy"
                             placeholder="Policy Number"
                             onChange={handleChange}
-                            className="border border-solid border-[#6C8396] p-2"
+                            className="border border-solid border-[#e4e5e7] p-2"
                           />{" "}
                         </div>
                       </div>
@@ -134,11 +119,11 @@ const Claim = () => {
                           type="text"
                           name="report"
                           onChange={handleChange}
-                          className="  border border-solid border-[#6C8396] p-2 pb-16"
+                          className="  border border-solid border-[#e4e5e7] p-2 pb-16"
                           placeholder="Report an Incident"
                         />
                         <Button type="submit" className="bg-[#900000] ">
-                          <span className="flex justify-between gap-36 items-center ">
+                          <span className="flex  gap-10 items-center ">
                             Make a Claim <IoIosArrowForward />
                           </span>
                         </Button>
@@ -148,36 +133,42 @@ const Claim = () => {
                 )}
               </Formik>
             </div>
-          </TabPanel>
-          <TabPanel>
-            <div className="flex flex-col gap-2 mx-10">
-              <h1 className="text-[#900000] font-semibold text-xl">Enter claim number</h1>
-              <p>Check your claim status today by providing your claim number<br/> for faster assistance</p>
-               
+          </TabsContent></div>
+          <div className="flex flex-row w-[98%] mt-4 mb-10">
+            <TabsContent className="" value="claims">
+              <div className="flex flex-col w-screen mt-4 px-10">
+                <h1 className="text-[#900000] font-semibold text-xl">
+                  Enter claim number
+                </h1>
+                <p className=" text-sm mt-4">
+                  Check your claim status today by providing your claim number
+                  <br /> for faster assistance
+                </p>
+
                 <Formik
-                initialValues={initialValues}
-                onSubmit={(values) => console.log(values)}
-              >
-               { ({handleChange}) => (
-                  <Form className="grid grid-cols-1 gap-4 w-[40%] mt-4">
-                    <Field
-                      type="text"
-                      name="claimNumber"
-                      onChange={handleChange}
-                      className="border border-solid border-[#6C8396] p-2"
-                      placeholder="Claim Number"
-                    />
-                    <Button  type="submit" className="bg-[#900000] my-2 mb-4 w-[40%] ">
-                      <div className="  flex justify-between items-center gap-10 ">
-                        Check Status <IoIosArrowForward />
-                      </div>
-                    </Button>
-                  </Form>
-                )
-               } 
-               </Formik>
-            </div>
-          </TabPanel>
+                  initialValues={initialValues}
+                  onSubmit={(values) => console.log(values)}
+                >
+                  {({ handleChange }) => (
+                    <Form className="grid grid-cols-1 gap-4 w-[40%] ">
+                      <Field
+                        type="text"
+                        name="claimNumber"
+                        onChange={handleChange}
+                        className="border border-solid border-[#e4e5e7] p-2 mt-2"
+                        placeholder="Claim Number"
+                      />
+                      <Button type="submit" className="bg-[#900000] my-2 w-[50%] ">
+                        <div className="  flex justify-between items-center gap-2 ">
+                          Check Status <IoIosArrowForward />
+                        </div>
+                      </Button>
+                    </Form>
+                  )}
+                </Formik>
+              </div>
+            </TabsContent>
+          </div>
         </Tabs>
       </div>
     </div>
@@ -185,6 +176,3 @@ const Claim = () => {
 };
 
 export default Claim;
-function useState(arg0: boolean): [any, any] {
-  throw new Error("Function not implemented.");
-}
