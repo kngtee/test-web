@@ -32,10 +32,10 @@ const Footer = () => {
             </div>
             <div className="mt-7 flex flex-col gap-1 md:gap-5 text-[11px] md:text-[18px] ">
               <p className=" ">Privacy Policy</p>
-              <p className=" ">Whistle blowing policy</p>
-              <p className=" ">Whistle blower</p>
-              <p className=" ">Terms and conditions</p>
-              <p className=" ">complaints procedure</p>
+              <p className=" ">Whistle Bowing Policy</p>
+              <p className=" ">Whistle Blower</p>
+              <p className=" ">Terms and Conditions</p>
+              <p className=" ">Complaints and Procedure</p>
             </div>
           </div>
           <div className="firstcol flex-auto">
@@ -43,7 +43,7 @@ const Footer = () => {
               <p className="text-[#9DADB9]">MORE</p>
             </div>
             <div className="mt-7 flex flex-col text-[11px] md:text-[18px] gap-1 md:gap-5">
-              <p className=" ">Carrers</p>
+              <p className=" ">Careers</p>
               <p className=" ">CSR</p>
               <p className=" ">Key Moments</p>
             </div>
@@ -53,10 +53,10 @@ const Footer = () => {
               <p className="text-[#9DADB9]">FOLLOW US</p>
             </div>
             <div className="flex gap-2 mt-7">
-              <FaFacebookSquare />
-              <FaTwitterSquare />
-              <FaInstagramSquare />
-              <FaLinkedin />
+              <FaFacebookSquare size={30} />
+              <FaTwitterSquare size={30} />
+              <FaInstagramSquare size={30} />
+              <FaLinkedin size={30} />
             </div>
           </div>
         </div>

@@ -11,7 +11,12 @@ const MenuNavigation = () => {
   const navigate = useNavigate();
   const [submenu, setSubmenu] = useState(false);
   const [submenu2, setSubmenu2] = useState(false);
+  const [selectedLink, setSelectedLink]= useState<string>()
   const menuRef = useRef<any>(null);
+
+  const handleLink = (link:string)=>{
+        setSelectedLink(link)
+  }
 
   const toggleMenu = () => {
     setSubmenu(!submenu);
@@ -45,15 +50,15 @@ const MenuNavigation = () => {
       <div
         className=' md:flex hidden rounded-3xl  bg-[white] drop-shadow-xl '
         ref={menuRef}>
-        <ul className='flex flex-row mt-2 '>
+        <ul className='flex flex-row my-1 '>
           <li
-            onClick={() => navigate("/")}
-            className='p-4 w-[full] cursor-pointer hover:font-bold hover:text-[#900000] flex align-middle'>
+            onClick={() => {navigate("/"); handleLink("Home")}}
+            className={`p-4 w-[full] cursor-pointer hover:font-bold hover:text-[#900000] flex align-middle ${selectedLink==="Home"?' bg-[#E9CCCC] rounded-3xl':''}`}>
             Home
           </li>
           <li
-            onClick={() => navigate("/about-us")}
-            className='p-4 w-[full] cursor-pointer flex align-middle hover:font-bold hover:text-[#900000]'>
+            onClick={() => {navigate("/about-us"); handleLink("About us")}}
+            className={`p-4 w-[full] cursor-pointer flex align-middle hover:font-bold hover:text-[#900000] ${selectedLink=== "About us"?'bg-[#E9CCCC] rounded-3xl':''}`}>
             About Us
           </li>
           <li
@@ -100,45 +105,45 @@ const MenuNavigation = () => {
               </ul>
             )}
           </li>
-          <li onClick={() => navigate("/media")} className="p-4 w-[full] cursor-pointer flex align-middle hover:font-bold hover:text-[#900000]">
+          <li onClick={() => {navigate("/media"); handleLink("media")}} className={`p-4 w-[full] cursor-pointer flex align-middle hover:font-bold hover:text-[#900000] ${selectedLink==="media"?'bg-[#E9CCCC] rounded-3xl':''}`}>
             Media
           </li>
           <li
-            onClick={() => navigate("/claim")}
-            className='p-4 w-[full] cursor-pointer flex align-middle hover:font-bold hover:text-[#900000]'>
+            onClick={() => {navigate("/claim"); handleLink("Make a Claim") }}
+            className={`p-4 w-[full] cursor-pointer flex align-middle hover:font-bold hover:text-[#900000] ${selectedLink==="Make a Claim"?'bg-[#E9CCCC] rounded-3xl':''}`}>
             Make a Claim
           </li>
           <li
             onClick={toggleMenu2}
-            className='p-4 relative w-[full] cursor-pointer flex align-middle hover:font-bold hover:text-[#900000]'>
+            className={`p-4 relative w-[full] cursor-pointer flex align-middle hover:font-bold hover:text-[#900000] ${selectedLink=== "Corporates"|| selectedLink=== "Downloads"|| selectedLink==="FAQs" || selectedLink=== "Finacials"?'bg-[#E9CCCC] rounded-3xl':''}`}>
             Resources <FaChevronDown className=' w-[10px] h-[10px] ml-1 mt-2' />
             {submenu2 && (
               <ul className='absolute left-0 mt-10 bg-white border rounded hover:font-normal text-gray-700 shadow-md'>
                 <li
                   className='p-2 hover:font-semibold text-sm'
                   onClick={() => {
-                    navigate("/resources/FAQs");
+                    navigate("/resources/FAQs"); handleLink("FAQs")
                   }}>
                   FAQs
                 </li>
                 <li
                   className='p-2 hover:font-semibold text-sm'
                   onClick={() => {
-                    navigate("/resources/Financials");
+                    navigate("/resources/Financials"); handleLink("Finacials")
                   }}>
                   Finacials
                 </li>
                 <li
                   className='p-2 hover:font-semibold text-sm'
                   onClick={() => {
-                    navigate("/resources/Downloads");
+                    navigate("/resources/Downloads"); handleLink("Downloads")
                   }}>
                   Downloads
                 </li>
                 <li
                   className='p-2 hover:font-semibold text-sm'
                   onClick={() => {
-                    navigate("/resources/Corporate");
+                    navigate("/resources/Corporate"); handleLink("Corporates")
                   }}>
                   Corporates
                 </li>
@@ -146,8 +151,8 @@ const MenuNavigation = () => {
             )}
           </li>
           <li
-            onClick={() => navigate("/contact")}
-            className='p-4 w-[full] cursor-pointer flex align-middle hover:font-bold hover:text-[#900000]'>
+            onClick={() => {navigate("/contact"); handleLink("contact us")}}
+            className={`p-4 w-[full] cursor-pointer flex align-middle hover:font-bold hover:text-[#900000] ${selectedLink=== "contact us"?'bg-[#E9CCCC] rounded-3xl':''}`}>
             Contact Us
           </li>
         </ul>

@@ -31,14 +31,14 @@ const ContactForm = () => {
                   type="text"
                   name="name"
                   onChange={handleChange}
-                  className="border border-solid border-[#6C8396] p-2"
+                  className="border border-solid border-[#6C8396] p-2 rounded-lg"
                   placeholder="Full Name"
                 />
                 <Field
                   type="email"
                   name="email"
                   onChange={handleChange}
-                  className="border border-solid border-[#6C8396] p-2"
+                  className="border border-solid border-[#6C8396] p-2 rounded-lg"
                   placeholder="Email"
                 />
               </div>
@@ -48,7 +48,7 @@ const ContactForm = () => {
                   name="subject"
                   onChange={handleChange}
                   placeholder="Subject"
-                  className="col-span-2 border border-solid border-[#6C8396] p-2 pb-4"
+                  className="col-span-2 border border-solid border-[#6C8396] rounded-lg p-2 pb-4"
                 />
               </div>
               <div className="grid grid-cols-2">
@@ -57,7 +57,7 @@ const ContactForm = () => {
                   name="message"
                   onChange={handleChange}
                   placeholder="Message"
-                  className="col-span-2 border border-solid border-[#6C8396] p-2 pb-10"
+                  className="col-span-2 border border-solid border-[#6C8396] rounded-lg  p-2 pb-10"
                 />
               </div>
               <div>
