@@ -4,8 +4,16 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: #F5F5F5;
 }
 
 body {
   font-family: 'Epilogue', sans-serif;
+}
+
+.text-gradient {
+  background-image: linear-gradient(to bottom, #D25050, #900000);
+  -webkit-background-clip: text;
+  background-clip: text; 
+  color: transparent;
 }
