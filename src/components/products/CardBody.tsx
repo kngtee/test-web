@@ -49,13 +49,15 @@ const CardBody: React.FunctionComponent<cardBodyProps> = ({ data }) => {
           {/* get quote button */}
           <div>
             <a href={getQuote}>
-              <button className='bg-[#900000] text-[#FFFFFF] w-[120px] h-[30px] rounded-3xl hover:duration-500'>
-                <span className='flex flex-row justify-around text-[#FFFFFF]'>
-                  Get Quote{" "}
-                  <i className='pt-1'>
+              <button className='bg-[#900000] px-[7px] md:px-[20px] lg:px-[20px] py-[6px] md:py-[8px] lg:py-[8px] rounded-3xl '>
+                <div className='flex flex-row justify-between text-[#FFFFFF]'>
+                  <p className='font-medium text-[12px] md:text-[16px] lg:text-[20px]'>
+                    Get a quote{" "}
+                  </p>
+                  <i className='pt-[1px] md:pt-[4px] lg:pt-[6px]  pl-4'>
                     <GrLinkNext color={"#FFFFFF"} />
                   </i>
-                </span>
+                </div>
               </button>
             </a>
           </div>

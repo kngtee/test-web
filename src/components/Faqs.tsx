@@ -40,7 +40,7 @@ const Faqs: React.FunctionComponent<faqDataProps> = ({ data }) => {
                       </p>
                       <p className='p-5'>
                         {activeIndex === index && (
-                          <FaCircle className={"text-[#900000]"} />
+                          <FaCircle className={"text-[#900000]"} size={22} />
                         )}
                       </p>
                     </div>
