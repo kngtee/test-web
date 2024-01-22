@@ -7,9 +7,9 @@ import NewsLetter from "./NewsLetter";
 
 const Footer = () => {
   return (
-    <div className=" bg-[#061D30]  ">
-      <div className=" flex-col container text-white">
-        <div className=" flex w-[100%] pt-10 md:pt-5">
+    <div className=" bg-[#061D30]   ">
+      <div className=" flex-col container  text-white">
+        <div className=" flex w-[100%] md:pt-5">
           <NewsLetter />
         </div>
         <div className="w-[100%] flex gap-10  md:gap-40  items-start justify-between py-10 text-[18px] flex-1 ">
