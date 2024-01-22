@@ -84,7 +84,7 @@ const ContactForm = () => {
           <p className="text-sm">Saturday: Closed</p>
           <p className="text-sm">Sunday: Closed</p>
         </div>
-        <button className="bg-[#900000] font-medium  gap-24 items-center text-white rounded-lg justify-start flex px-4 py-6"><h4>Take a quick survey</h4><IoIosArrowForward/></button>
+        <button className="bg-[#900000] font-medium   items-center text-white rounded-lg justify-between flex px-4 py-6"><h4>Take a quick survey</h4><IoIosArrowForward/></button>
       </div>
     </div>
   );
