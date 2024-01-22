@@ -16,9 +16,11 @@ const Faqs: React.FunctionComponent<faqDataProps> = ({ data }) => {
 
   return (
     <>
-      <div className='bg-[#FFFFFF] flex justify-center mb-10 mt-10'>
+      <div className='bg-[#FFFFFF] flex justify-center pt-[50px] pb-[80px]'>
         <div className='w-[90%]'>
-          <p className='text-[#000] text-[40px] font-bold pl-7'>FAQs.</p>
+          <p className='text-[#000] text-[40px] font-bold pl-7  py-[50px]'>
+            FAQs.
+          </p>
           {/* faq contents */}
           <div className='w-[100%] flex flex-col md:flex-row lg:flex-row gap-6 justify-center'>
             {/* faq list */}
