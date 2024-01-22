@@ -50,20 +50,20 @@
   }
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   width: 10px;
 }
 
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
   background: #888;
   border-radius: 5px;
 }
 
-::-webkit-scrollbar-thumb:hover{
+::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
 
-::-webkit-scrollbar-track{
+::-webkit-scrollbar-track {
   background: #F5F5F5;
   border-radius: 5px
 }
@@ -79,7 +79,7 @@
   }
 
   section {
-    @apply py-[75px]
+    @apply py-[75px] w-full;
   }
 }
 
@@ -89,12 +89,13 @@
   }
 
   .heading {
-    @apply text-[44px] leading-[54px] font-[700] 
+    @apply text-[44px] leading-[54px] font-[700]
   }
 
   .text__para {
     @apply text-[16px] leading-[26px] font-[400] text-textColor mt-[18px]
   }
+
   .text__para__dim {
     @apply text-[16px] leading-[26px] font-[400] text-[#606060] mt-[18px]
   }
