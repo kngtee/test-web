@@ -1,4 +1,4 @@
-import React from "react";
+
 import blogHeaderImg from "../assets/images/blog_header_img.png";
 import News01 from "../assets/images/InTheNews01.png";
 import News02 from "../assets/images/InTheNews02.png";
@@ -9,15 +9,15 @@ const Media = () => {
   return (
     <>
       {/* Blog Hero */}
-      <section className="pt-[40px] 2xl:h-[800px] bg-[#FBF9F9]">
+      <section className="pt-[40px] h-[100vh] bg-[#FBF9F9]">
         <div className="container">
           <div className="container px-8 space-y-6">
-            <h1 className="text-[32px] leading-[42px] text-primaryColor font-[700]">
+            <h1 className="text-[32px] leading-[42px] text-gradient font-[700]">
               Blog
             </h1>
             <div className="w-full bg-[#F4E6E6] flex items-start justify-between rounded-xl p-6 gap-3">
               <div className="space-y-4">
-                <h4 className="text-primaryColor text-lg">CSR</h4>
+                <h4 className="text-primaryColor text-[24px] leading-[50px]">CSR</h4>
                 <div>
                   <h1 className="text-[38px] leading-[48px] text-black font-[700] max-w-[700px]">
                     Custodian Investment empowers 125 youths
@@ -45,11 +45,11 @@ const Media = () => {
       </section>
 
       {/* News by Tags */}
-      <section className="pt-[40px] 2xl:h-[800px] bg-[#FFFFFF]">
+      <section className="pt-[80px] pb-[80px] bg-[#FFFFFF]">
         <div className="container">
           <div className="container px-8 space-y-10">
             <div className="">
-              <ul className="flex gap-4">
+              <ul className="flex gap-4 text-[18px] leading-[25px]">
                 <li className="bg-primaryColor text-white px-4 py-2 rounded-3xl cursor-pointer">
                   All
                 </li>
@@ -59,8 +59,9 @@ const Media = () => {
                 <li className="px-4 py-2 cursor-pointer">Media</li>
               </ul>
             </div>
-            <div className="grid grid-cols-2 gap-6">
-            <div className="w-[558px] bg-[#F5F5F5] flex items-start justify-start rounded-xl p-6 gap-3">
+            <div className="inline-flex flex-wrap gap-[25px]">
+              
+            <div className="w-[558px] bg-[#F5F5F5] flex items-start justify-start rounded-[25px] p-6 gap-3">
               <figure className="h-full w-full">
                 <img src={blogPost01} alt="" className="h-fit" />
               </figure>
@@ -76,7 +77,7 @@ const Media = () => {
                     The new product we released is to help users monitor thier
                     assests and control it.
                   </p>
-                  <span className="text-xs font-semibold">5 Oct, 2023 Femi OJ</span>
+                  <span className="text-xs font-semibold">1 Oct, 2023 Femi OJ</span>
                 </div>
                 <div className="flex items-center gap-2 text-primaryColor text-sm">
                   <span>Read the story</span>
@@ -84,7 +85,7 @@ const Media = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[558px] bg-[#F5F5F5] flex items-start justify-start rounded-xl p-6 gap-3">
+            <div className="w-[558px] bg-[#F5F5F5] flex items-start justify-start rounded-[25px] p-6 gap-3">
               <figure className="h-full w-full">
                 <img src={blogPost01} alt="" className="h-fit" />
               </figure>
@@ -100,7 +101,7 @@ const Media = () => {
                     The new product we released is to help users monitor thier
                     assests and control it.
                   </p>
-                  <span className="text-xs font-semibold">5 Oct, 2023 Femi OJ</span>
+                  <span className="text-xs font-semibold">2 Oct, 2023 Femi OJ</span>
                 </div>
                 <div className="flex items-center gap-2 text-primaryColor text-sm">
                   <span>Read the story</span>
@@ -108,7 +109,7 @@ const Media = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[558px] bg-[#F5F5F5] flex items-start justify-start rounded-xl p-6 gap-3">
+            <div className="w-[558px] bg-[#F5F5F5] flex items-start justify-start rounded-[25px] p-6 gap-3">
               <figure className="h-full w-full">
                 <img src={blogPost01} alt="" className="h-fit" />
               </figure>
@@ -124,7 +125,7 @@ const Media = () => {
                     The new product we released is to help users monitor thier
                     assests and control it.
                   </p>
-                  <span className="text-xs font-semibold">5 Oct, 2023 Femi OJ</span>
+                  <span className="text-xs font-semibold">3 Oct, 2023 Femi OJ</span>
                 </div>
                 <div className="flex items-center gap-2 text-primaryColor text-sm">
                   <span>Read the story</span>
@@ -132,7 +133,7 @@ const Media = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[558px] bg-[#F5F5F5] flex items-start justify-start rounded-xl p-6 gap-3">
+            <div className="w-[558px] bg-[#F5F5F5] flex items-start justify-start rounded-[25px] p-6 gap-3">
               <figure className="h-full w-full">
                 <img src={blogPost01} alt="" className="h-fit" />
               </figure>
@@ -148,7 +149,7 @@ const Media = () => {
                     The new product we released is to help users monitor thier
                     assests and control it.
                   </p>
-                  <span className="text-xs font-semibold">5 Oct, 2023 Femi OJ</span>
+                  <span className="text-xs font-semibold">4 Oct, 2023 Femi OJ</span>
                 </div>
                 <div className="flex items-center gap-2 text-primaryColor text-sm">
                   <span>Read the story</span>
@@ -163,10 +164,10 @@ const Media = () => {
       </section>
 
       {/* In The News */}
-      <section className="pt-[40px] 2xl:h-[800px] bg-[#FBF9F9]">
+      <section className="pt-[40px] pb-[150px] bg-[#FBF9F9]">
         <div className="container">
-          <div className="container px-8 space-y-6">
-            <h1 className="text-[32px] leading-[42px] text-primaryColor font-[700]">
+          <div className="container px-8 space-y-[25px]">
+            <h1 className="text-[32px] leading-[50px] font-[700] text-gradient">
               In The News
             </h1>
             <div className="w-full bg-[#F5F5F5] flex items-start justify-between rounded-xl p-6 space-x-6">

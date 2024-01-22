@@ -1,4 +1,4 @@
-import React from "react";
+
 import Typewriter from "typewriter-effect";
 import { Button } from "../ui/button";
 import heroImg from "../../assets/images/hero-img.png";
@@ -8,46 +8,51 @@ const GetStarted = () => {
   const navigate = useNavigate();
 
   return (
-    <section className="pt-[3rem] lg:h-[100vh] bg-[#FBF9F9]">
-      <div className="container flex flex-col lg:flex-row gap-[3.75rem] items-center justify-between h-[80%]">
-        {/* Hero Content Left */}
-        <div className="lg:w-[56.25rem] space-y-5">
-          <div className="flex flex-col items-start">
-            <div className="text-[2.25rem] leading-[2.875rem] text-primaryColor font-[700] md:text-[3.75rem] md:leading-[4.375rem]">
-              <Typewriter
-                options={{
-                  strings: ["Protecting", "Guarding", "Preserving"],
-                  autoStart: true,
-                  loop: true,
-                  delay: 250,
-                }}
-              />
+    <section className="bg-[#FBF9F9] h-[100vh] md:pb-[600px]">
+      <div className="w-full items-start justify-center]">
+        <div className="flex items-center justify-between mx-auto px-[80px] 2xl:px-[150px]">
+          {/* Hero Content Left */}
+          <div className="w-[550px] space-y-[50px]">
+            <div className="space-y-[30px]">
+              <div>
+                <span className="text-[58px]  leading-[68px] text-primaryColor font-[700]">
+                  <Typewriter
+                    options={{
+                      strings: ["Protecting", "Guarding", "Preserving"],
+                      autoStart: true,
+                      loop: true,
+                      delay: 250,
+                    }}
+                  />
+                </span>
+                <h1 className="text-[58px] leading-[68px] text-black font-[700]">
+                  you and everyone you love
+                </h1>
+              </div>
+              <p className="text-[24px] leading-[34px] font-[400] ">
+                We're more than a company - we're your lifelong partners in
+                safeguarding the people and dreams you hold dear
+              </p>
             </div>
-            <h1 className="text-[2.25rem] leading-[2.875rem] text-black font-[700] md:text-[3.75rem] md:leading-[4.375rem]">
-              you and everyone you love
-            </h1>
+
+            <div className="flex flex-col md:flex-row gap-[50px]">
+              <Button className="w-[236px] h-[70px] font-[700] rounded-[50px] text-[18px] leading-[30px]">
+                Get a Quote Now
+              </Button>
+              <Button
+                className="w-[236px] h-[70px] font-[700] bg-[#F4E6E6] rounded-[50px] text-[18px] leading-[30px] text-primaryColor hover:bg-[#F4E6E6]"
+                onClick={() => navigate("/about-us")}
+              >
+                Learn More
+              </Button>
+            </div>
           </div>
-          <p className="text-[1.125rem]">
-            We're more than a company - we're your lifelong partners in
-            safeguarding the people and dreams you hold dear
-          </p>
-          <div className="flex flex-col md:flex-row gap-4">
-            <Button className="w-full md:w-[12.5rem] h-[4.375rem] font-bold mb-1 md:mb-0">
-              Get a Quote Now
-            </Button>
-            <Button
-              className="w-full md:w-[12.5rem] h-[4.375rem] font-bold bg-[#F4E6E6] text-primaryColor hover:bg-[#F4E6E6]"
-              onClick={() => navigate("/about-us")}
-            >
-              Learn More
-            </Button>
+          {/* Hero Image Right */}
+          <div className="w-[550px] 2xl:w-[650px]">
+            <figure className="flex-shrink-0">
+              <img className="w-full" src={heroImg} alt="" />
+            </figure>
           </div>
-        </div>
-        {/* Hero Image Right */}
-        <div className="md:w-[43.75rem] md:mt-0 mt-2rem">
-          <figure className="max-w-full lg:max-w-[60rem] mx-auto">
-            <img className="w-full" src={heroImg} alt="" />
-          </figure>
         </div>
       </div>
     </section>
