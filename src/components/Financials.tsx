@@ -9,7 +9,7 @@ const Financials: React.FunctionComponent<financialProps> = ({ data }) => {
   const financialData: any = data;
   return (
     <>
-      <div className='bg-[#FBF9F9] flex justify-center mt-10'>
+      <div className='bg-[#FBF9F9] flex justify-center'>
         <div className='w-[90%]'>
           <p className='text-[#000] text-[40px] font-bold pl-7 pt-10 pb-10'>
             Financials
