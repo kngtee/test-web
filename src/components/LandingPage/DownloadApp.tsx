@@ -1,4 +1,4 @@
-import React from "react";
+
 import googleAppStore from "../../assets/images/android-banner.png";
 import iosStore from "../../assets/images/ios-banner.png";
 const DownloadApp = () => {
@@ -23,7 +23,7 @@ const DownloadApp = () => {
           </div>
         </div>
       </div>
-      <div className="h-[290px]"></div>
+      <div className="h-[200px]"></div>
     </section>
   );
 };

@@ -9,7 +9,7 @@ const Media = () => {
   return (
     <>
       {/* Blog Hero */}
-      <section className="pt-[40px] h-[100vh] bg-[#FBF9F9]">
+      <section className="pt-[40px]  h-[100vh] bg-[#FBF9F9]">
         <div className="container">
           <div className="container px-8 space-y-6">
             <h1 className="text-[32px] leading-[42px] text-gradient font-[700]">
