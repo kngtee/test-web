@@ -43,7 +43,7 @@ const MenuNavigation = () => {
   }, [menuRef]);
 
   return (
-    <div className="flex flex-row items-center justify-between  bg-[#FBF9F9] pt-[50px] px-[100px]  pb-[30px] ">
+    <div className="flex flex-row items-center justify-between bg-[#FBF9F9] pt-[50px] px-[100px]  pb-[30px] ">
       <div className="flex items-center justify-center">
         <img src={claLogo} alt="logo" className=" h-[40px] md:h-[65.5px]" />
       </div>
@@ -57,7 +57,7 @@ const MenuNavigation = () => {
               navigate("/");
               handleLink("Home");
             }}
-            className={`py-[10px] px-[15px] w-[full] cursor-pointer hover:font-bold  flex  items-center justify-center h-[43px] ${
+            className={`py-[10px] px-[15px] w-[full] cursor-pointer hover:font-bold   flex  items-center justify-center h-[43px] ${
               selectedLink === "Home"
                 ? " bg-[#900000] text-white rounded-[50px] "
                 : ""

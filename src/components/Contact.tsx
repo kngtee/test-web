@@ -7,7 +7,7 @@ import Hero from './Hero'
 
 const Contact = () => {
   return (
-    <div>
+    <div className='bg-white'>
       <Hero title='Do you have questions, ' subtitle='let’s hear from you.' description=''/>
       <ContactForm/>
         <ContactOffices/>

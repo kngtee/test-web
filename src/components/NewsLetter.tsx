@@ -3,13 +3,13 @@ import { useState } from "react";
 import { Button } from "../components/ui/button";
 
 const NewsLetter = () => {
-  const [email, setEmail] = useState<any>("");
+  const [email, setEmail] = useState<string>("");
   return (
-    <div className="flex flex-col w-full  ">
+    <div className="flex flex-col w-full mt-[75px] ">
       <div className=" text-xl md:text-3xl lg:text-5xl font-bold flex justify-start my-2">
         <p>Subscribe to our Newsletter</p>
       </div>
-      <div className=" w-full flex items-center py-2 justify-between pl-4 pr-2 rounded-full border border-solid border-[#6C8396] h-[70px] ">
+      <div className=" w-full flex items-center mt-10 py-2 justify-between pl-4 pr-2 rounded-full border border-solid border-[#6C8396] h-[70px] ">
         {" "}
         <input
           onChange={(e) => {
