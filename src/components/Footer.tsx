@@ -7,7 +7,7 @@ import NewsLetter from "./NewsLetter";
 
 const Footer = () => {
   return (
-    <div className=" bg-[#061D30] items-center  justify-center">
+    <div className=" bg-[#061D30]  ">
       <div className=" flex-col container text-white">
         <div className=" flex w-[100%] pt-10 md:pt-5">
           <NewsLetter />
