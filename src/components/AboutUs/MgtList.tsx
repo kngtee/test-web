@@ -16,7 +16,7 @@ const MgtList = () => {
               className={`p-3 lg:p-5 rounded-[12px] border border-solid ${
                 active === index ? "bg-[#F4E6E6]" : "bg-[#FAF5F5]"
               } mb-5 cursor-pointer flex items-center ${
-                active === index ? "justify-between" : "justify-start"
+                active === index ? "justify-stretch" : "justify-stretch"
               } gap-10 h-[80px] w-[500px] `}
                 onClick={() => {
                   setDesc(item.desc);

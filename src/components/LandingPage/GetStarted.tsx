@@ -1,4 +1,4 @@
-import React from "react";
+
 import Typewriter from "typewriter-effect";
 import { Button } from "../ui/button";
 import heroImg from "../../assets/images/hero-img.png";
