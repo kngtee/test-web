@@ -16,7 +16,7 @@ const GetQuoteTabBar: React.FunctionComponent<getQuoteTabBar> = ({
   const toggledNav: string = nav;
   return (
     <>
-      <div className='flex flex-row justify-center gap-5 bg-[#F4E6E6] rounded-[56px] py-[0.8px] md:py-[1.5px] lg:py-[2px] px-[4px]'>
+      <div className='flex flex-row justify-center gap-5 bg-[#F4E6E6] rounded-[56px] py-[0px] md:py-[1.5px] lg:py-[2px] px-[4px]'>
         {getQuoteData.map((nav: any, index: number) => {
           return (
             <div key={index}>
@@ -24,7 +24,7 @@ const GetQuoteTabBar: React.FunctionComponent<getQuoteTabBar> = ({
                 onClick={() => {
                   getTabData(nav.productType);
                 }}
-                className={`font-normal text-[12px] md:text-[14px] lg:text-[16px] ${
+                className={`font-normal text-[10px] md:text-[14px] lg:text-[16px] ${
                   nav.productType === toggledNav
                     ? "text-[#FFFFFF]"
                     : "text-[#3F3F3F]"

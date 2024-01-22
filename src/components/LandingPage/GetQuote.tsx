@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { getQuoteData } from "../../assets/data/getQuoteData";
 import { GrLinkNext } from "react-icons/gr";
 import { GrLinkPrevious } from "react-icons/gr";
@@ -69,38 +69,40 @@ const GetQuote: React.FunctionComponent<{}> = () => {
           />
         </div>
         {/* image display */}
-        <div className='w-[100%] h-[460px] mt-10'>
-          <GetQuoteImage data={toggledNavData} index={initialIndex} />
-        </div>
+        <GetQuoteImage data={toggledNavData} index={initialIndex} />
         {/* dots, next and prev button */}
         <div className='w-[78%] flex flex-row justify-between mt-4'>
           <div>
             <GetQuoteDots data={toggledNavData} index={initialIndex} />
           </div>
           <div>
-            <div className='flex flex-row gap-5'>
+            <div className='flex flex-row gap-5 pt-4'>
               {initialIndex > 0 ? (
-                <Button
-                  onClick={backBtn}
-                  className='bg-transparent text-[white] w-[100px] h-[30px] rounded-3xl'>
-                  <span className='flex flex-row justify-around text-[#900000] hover:text-white'>
-                    <i className='pt-1'>
-                      <GrLinkPrevious />
+                <button
+                  className='bg-[#900000] px-[7px] md:px-[20px] lg:px-[20px] py-[6px] md:py-[8px] lg:py-[8px] rounded-3xl'
+                  onClick={backBtn}>
+                  <div className='flex flex-row justify-between text-[#FFFFFF]'>
+                    <i className='pt-[1px] md:pt-[4px] lg:pt-[6px]  pr-4'>
+                      <GrLinkPrevious color={"#FFFFFF"} />
                     </i>
-                    Back
-                  </span>
-                </Button>
+                    <p className='font-medium text-[12px] md:text-[16px] lg:text-[20px]'>
+                      Back
+                    </p>
+                  </div>
+                </button>
               ) : null}
-              <Button
-                onClick={nextBtn}
-                className='bg-[#900000] text-[white] w-[100px] h-[30px] rounded-3xl'>
-                <span className='flex flex-row justify-around'>
-                  Next{" "}
-                  <i className='pt-1'>
-                    <GrLinkNext />
+              <button
+                className='bg-[#900000] px-[7px] md:px-[20px] lg:px-[20px] py-[6px] md:py-[8px] lg:py-[8px] rounded-3xl'
+                onClick={nextBtn}>
+                <div className='flex flex-row justify-between text-[#FFFFFF]'>
+                  <p className='font-medium text-[12px] md:text-[16px] lg:text-[20px]'>
+                    Next
+                  </p>
+                  <i className='pt-[1px] md:pt-[4px] lg:pt-[6px] pl-4'>
+                    <GrLinkNext color={"#FFFFFF"} />
                   </i>
-                </span>
-              </Button>
+                </div>
+              </button>
             </div>
           </div>
         </div>

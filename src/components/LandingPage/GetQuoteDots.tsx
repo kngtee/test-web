@@ -19,7 +19,7 @@ const GetQuoteDots: React.FunctionComponent<getQuoteDots> = ({
           return (
             <div key={index}>
               <div></div>
-              <div className='flex flex-row gap-3'>
+              <div className='flex flex-row gap-3 pt-4'>
                 {item.data &&
                   item.data.map((item: any, index: number) => {
                     return (

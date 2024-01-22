@@ -76,14 +76,14 @@ const Claim = () => {
                             name="fullname"
                             placeholder="Full Name"
                             onChange={handleChange}
-                            className="border border-solid border-[#e4e5e7] p-2"
+                            className="border border-solid rounded-lg  border-[#e4e5e7] p-2"
                           />
                           <Field
                             type="email"
                             name="email"
                             placeholder="Email"
                             onChange={handleChange}
-                            className="border border-solid border-[#e4e5e7] p-2"
+                            className="border border-solid rounded-lg  border-[#e4e5e7] p-2"
                           />
                         </div>
                         <div className="grid grid-cols-2 gap-4">
@@ -92,7 +92,7 @@ const Claim = () => {
                             name="mobileNumber"
                             placeholder="Mobile Number"
                             onChange={handleChange}
-                            className="border border-solid border-[#e4e5e7] p-2"
+                            className="border border-solid rounded-lg  border-[#e4e5e7] p-2"
                           />
                           <Field
                             type={isFocused ? "date" : "text"}
@@ -101,7 +101,7 @@ const Claim = () => {
                             onChange={handleChange}
                             onFocus={handleFocus}
                             onBlur={handleBlur}
-                            className="border border-solid border-[#e4e5e7] p-2"
+                            className="border border-solid rounded-lg  border-[#e4e5e7] p-2"
                           />
                         </div>
                         <div className="grid grid-cols-1 gap-4">
@@ -110,7 +110,7 @@ const Claim = () => {
                             name="policy"
                             placeholder="Policy Number"
                             onChange={handleChange}
-                            className="border border-solid border-[#e4e5e7] p-2"
+                            className="border border-solid rounded-lg  border-[#e4e5e7] p-2"
                           />{" "}
                         </div>
                       </div>
@@ -119,7 +119,7 @@ const Claim = () => {
                           type="text"
                           name="report"
                           onChange={handleChange}
-                          className="  border border-solid border-[#e4e5e7] p-2 pb-16"
+                          className="  border border-solid rounded-lg  border-[#e4e5e7] p-2 pb-16"
                           placeholder="Report an Incident"
                         />
                         <Button type="submit" className="bg-[#900000] ">
@@ -155,7 +155,7 @@ const Claim = () => {
                         type="text"
                         name="claimNumber"
                         onChange={handleChange}
-                        className="border border-solid border-[#e4e5e7] p-2 mt-2"
+                        className="border border-solid rounded-lg  border-[#e4e5e7] p-2 mt-2"
                         placeholder="Claim Number"
                       />
                       <Button type="submit" className="bg-[#900000] my-2 w-[50%] ">
