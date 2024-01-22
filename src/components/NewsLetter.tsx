@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Button } from "../components/ui/button";
 
 const NewsLetter = () => {
-  const [email, setEmail] = useState<any>("");
+  const [email, setEmail] = useState<string>("");
   return (
     <div className="flex flex-col w-full  ">
       <div className=" text-xl md:text-3xl lg:text-5xl font-bold flex justify-start my-2">
