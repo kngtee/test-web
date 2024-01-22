@@ -4,7 +4,7 @@ import Routers from "@/routes/Routers";
 const Layout = () => {
   return (
     <>
-      <MenuNavigation />
+      <MenuNavigation  />
       <main>
         <Routers />
       </main>

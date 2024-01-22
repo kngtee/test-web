@@ -14,9 +14,9 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="md:grid md:grid-cols-3 flex-col md:flex-row lg:flex-row gap-10 py-4 mx-10 mt-5">
+    <div className="md:grid md:grid-cols-3 flex-col md:flex-row lg:flex-row gap-10  mt-5 px-[100px] py-[50px]">
       <div className="col-span-2 flex flex-col">
-        <h1 className="text-[#900000] font-semibold text-2xl">
+        <h1 className="text-[#900000]  text-[38px] font-[500] leading-[45px]">
           Share your ideas, inquiries and provide feedback
         </h1>
         <Formik
@@ -25,20 +25,20 @@ const ContactForm = () => {
           onSubmit={(values) => console.log(values)}
         >
           {({ handleChange}) => (
-            <Form className="grid grid-cols-1 gap-4 mt-4">
-              <div className="grid grid-cols-2 gap-4">
+            <Form className="flex flex-col gap-[25px] mt-4">
+              <div className="flex gap-[25px]">
                 <Field
                   type="text"
                   name="name"
                   onChange={handleChange}
-                  className="border border-solid border-[#6C8396] p-2 rounded-lg"
+                  className="border border-solid h-[60px] w-[320px] border-[#E5E5E5] px-[15px] py-[20px] rounded-[7.5px]"
                   placeholder="Full Name"
                 />
                 <Field
                   type="email"
                   name="email"
                   onChange={handleChange}
-                  className="border border-solid border-[#6C8396] p-2 rounded-lg"
+                  className="border border-solid h-[60px] w-[320px] border-[#E5E5E5] px-[15px] py-[20px] rounded-[7.5px]"
                   placeholder="Email"
                 />
               </div>
@@ -48,7 +48,7 @@ const ContactForm = () => {
                   name="subject"
                   onChange={handleChange}
                   placeholder="Subject"
-                  className="col-span-2 border border-solid border-[#6C8396] rounded-lg p-2 pb-4"
+                  className="border border-solid h-[60px] w-[665px] border-[#E5E5E5] px-[15px] py-[20px] rounded-[7.5px]"
                 />
               </div>
               <div className="grid grid-cols-2">
@@ -57,19 +57,19 @@ const ContactForm = () => {
                   name="message"
                   onChange={handleChange}
                   placeholder="Message"
-                  className="col-span-2 border border-solid border-[#6C8396] rounded-lg  p-2 pb-10"
+                  className="border border-solid h-[145px] w-[665px] border-[#E5E5E5] px-[15px] py-[20px] rounded-[7.5px]"
                 />
               </div>
               <div>
-                <Button type="submit"  className="px-16 mt-4">
-                  Send
+                <Button type="submit"  className=" items-center flex justify-between text-[22px] leading-[30px] font-[500] h-fit w-[220px]  mt-4">
+                 <h4>Send</h4> <IoIosArrowForward/>
                 </Button>
               </div>
             </Form>
           )}
         </Formik>
       </div>
-      <div className="col-span-1 rounded-lg flex flex-col gap-4 p-6 bg-[#F5F5F5]">
+      <div className=" mt-[80px] p-[25px] flex flex-col gap-[25px]   bg-[#F5F5F5] h-fit w-fit  border-[4px] border-[#e5e5e5] rounded-[14px]">
         <div>
           <h1 className="font-semibold text-lg">The Office</h1>
           <p className="text-sm">
@@ -84,7 +84,7 @@ const ContactForm = () => {
           <p className="text-sm">Saturday: Closed</p>
           <p className="text-sm">Sunday: Closed</p>
         </div>
-        <button className="bg-[#900000] font-medium  gap-24 items-center text-white rounded-lg justify-start flex px-4 py-6"><h4>Take a quick survey</h4><IoIosArrowForward/></button>
+        <button className="bg-[#900000] font-medium bg-gradient-to-b from-[#D25050] from-5% to-[#900000] to-95%  items-center text-white rounded-lg justify-between flex px-4 py-6"><h4>Take a quick survey</h4><IoIosArrowForward/></button>
       </div>
     </div>
   );
