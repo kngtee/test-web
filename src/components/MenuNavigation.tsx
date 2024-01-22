@@ -51,13 +51,13 @@ const MenuNavigation = () => {
         className=" md:flex hidden rounded-[50px] px-[10px] py-[5px] items-center justify-between bg-[white] drop-shadow-xl h-[63px]"
         ref={menuRef}
       >
-        <ul className="flex flex-row  ">
+        <ul className="flex flex-row text-[14px] leading-[22.5px] ">
           <li
             onClick={() => {
               navigate("/");
               handleLink("Home");
             }}
-            className={`py-[10px] px-[15px] w-[full] cursor-pointer hover:font-bold   flex  items-center justify-center h-[43px] ${
+            className={`py-[10px] px-[15px]  cursor-pointer hover:font-bold   flex  items-center justify-center h-[43px] ${
               selectedLink === "Home"
                 ? " bg-[#900000] text-white rounded-[50px] "
                 : ""
@@ -70,7 +70,7 @@ const MenuNavigation = () => {
               navigate("/about-us");
               handleLink("About us");
             }}
-            className={`py-[10px] px-[15px] w-[full] h-[43px] cursor-pointer  flex align-middle hover:font-bold  ${
+            className={`py-[10px] px-[15px]  h-[43px] cursor-pointer  flex align-middle hover:font-bold  ${
               selectedLink === "About us"
                 ? "bg-[#900000] text-white rounded-[50px]"
                 : ""
@@ -80,7 +80,7 @@ const MenuNavigation = () => {
           </li>
           <li
             onClick={toggleMenu}
-            className={`py-[10px] px-[15px] w-[full] h-[43px] relative cursor-pointer  flex hover:font-bold  ${
+            className={`py-[10px] px-[15px]  h-[43px] relative cursor-pointer  flex hover:font-bold  ${
               selectedLink === "Savings and Investment" ||
               selectedLink === "Protection Policies" ||
               selectedLink === "Endowment Policies" ||
@@ -146,7 +146,7 @@ const MenuNavigation = () => {
               navigate("/media");
               handleLink("media");
             }}
-            className={`py-[10px] px-[15px] w-[full] h-[43px] cursor-pointer flex align-middle hover:font-bold  ${
+            className={`py-[10px] px-[15px]  h-[43px] cursor-pointer flex align-middle hover:font-bold  ${
               selectedLink === "media"
                 ? "bg-[#900000] text-white rounded-[50px]"
                 : ""
@@ -159,7 +159,7 @@ const MenuNavigation = () => {
               navigate("/claim");
               handleLink("Make a Claim");
             }}
-            className={`py-[10px] px-[15px] w-[full] h-[43px] cursor-pointer flex align-middle hover:font-bold  ${
+            className={`py-[10px] px-[15px]  h-[43px] cursor-pointer flex align-middle hover:font-bold  ${
               selectedLink === "Make a Claim"
                 ? "bg-[#900000] text-white rounded-[50px]"
                 : ""
@@ -169,7 +169,7 @@ const MenuNavigation = () => {
           </li>
           <li
             onClick={toggleMenu2}
-            className={` relative py-[10px] px-[15px] w-[full] h-[43px]cursor-pointer flex align-middle hover:font-bold  ${
+            className={` relative py-[10px] px-[15px]  h-[43px] cursor-pointer flex align-middle hover:font-bold  ${
               selectedLink === "Corporates" ||
               selectedLink === "Downloads" ||
               selectedLink === "FAQs" ||
@@ -225,7 +225,7 @@ const MenuNavigation = () => {
               navigate("/contact");
               handleLink("contact us");
             }}
-            className={`py-[10px] px-[15px] w-[full] h-[43px] cursor-pointer flex align-middle hover:font-bold  ${
+            className={`py-[10px] px-[15px]  h-[43px] cursor-pointer flex align-middle hover:font-bold  ${
               selectedLink === "contact us"
                 ? "bg-[#900000] text-white rounded-[50px]"
                 : ""
@@ -237,7 +237,7 @@ const MenuNavigation = () => {
       </div>
 
       <div className="hidden md:flex justify-items-center align-middle ">
-        <Button className=" h-[63px] p-[20px]">Access Self-Service</Button>
+        <Button className=" h-[63px] px-[20px]">Access Self-Service</Button>
       </div>
       <RiMenuLine size={20} className="md:hidden" />
     </div>

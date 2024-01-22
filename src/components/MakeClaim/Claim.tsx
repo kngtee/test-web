@@ -130,13 +130,12 @@ const Claim = () => {
                           </div>
                         </div>
                         <div className="flex flex-col gap-[25px] w-[30%]">
-                          <Field
-                            type="text"
+                          <textarea
                             name="report"
                             onChange={handleChange}
-                            className="border border-solid rounded-lg border-[#e5e5e5] w-[320px] h-[145px] py-[20px] px-[15px]"
+                            className="border border-solid placeholder:justify-start rounded-lg border-[#e5e5e5] w-[320px] h-[145px] py-[20px] px-[15px]"
                             placeholder="Report an Incident"
-                          />
+                          ></textarea>
                           <Button
                             type="submit"
                             className="bg-[#900000] w-[320px] h-[50px] py-[10px] px-[20px] text-[16px] font-[500] leading-[30px] rounded-[40px] flex items-center justify-between"
